@@ -23,17 +23,20 @@ public class ConsoleRenderingBoard implements Render{
     }
 
     private char getSymbol(Figure figure) {
-    char symbol = switch (figure.getType()) {
-        case 'K' -> 'K';
-        case 'Q' -> 'Q';
-        case 'R' -> 'R';
-        case 'B' -> 'B';
-        case 'N' -> 'N';
-        case 'P' -> 'P';
-        default -> '?';
-    };
-    return figure.getColor() == Color.BLACK ? Character.toLowerCase(symbol) : symbol;
-}
+        char type = figure.getType();
+        boolean isWhite = figure.getColor() == Color.WHITE;
+
+        return switch (type) {
+            case 'K' -> isWhite ? '♔' : '♚';
+            case 'Q' -> isWhite ? '♕' : '♛';
+            case 'R' -> isWhite ? '♖' : '♜';
+            case 'B' -> isWhite ? '♗' : '♝';
+            case 'N' -> isWhite ? '♘' : '♞';
+            case 'P' -> isWhite ? '♙' : '♟';
+            default -> '?';
+        };
+
+    }
 }
 
     
