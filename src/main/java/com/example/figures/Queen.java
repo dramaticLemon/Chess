@@ -12,10 +12,12 @@ public class Queen extends Figure{
         this.x = x;
         this.y = y;
         this.color = color;
+        this.type = 'Q';
     }
 
     @Override
     void mekeMove() {
         logger.debug("Queen is move");
     }
+  
 }

@@ -12,10 +12,12 @@ public class Knight extends Figure{
         this.x = x;
         this.y = y;
         this.color = color;
+        this.type = 'N';
     }
 
     @Override
     void mekeMove() {
         logger.debug("Knight is move");
     }
+
 }

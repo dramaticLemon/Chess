@@ -6,6 +6,15 @@ public abstract class Figure {
     int x;
     int y;
     Color color;
+    char type;
+
+    public char getType() {
+        return this.type;
+    };
+
+    public Color getColor() {
+        return this.color;
+    }
 
     @SuppressWarnings("unused")
     abstract void mekeMove();

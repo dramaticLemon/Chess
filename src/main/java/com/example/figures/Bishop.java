@@ -12,6 +12,7 @@ public class Bishop extends Figure{
         this.x = x;
         this.y = y;
         this.color = color;
+        this.type = 'B';
     }
 
     @Override
