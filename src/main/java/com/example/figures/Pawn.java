@@ -3,6 +3,7 @@ package com.example.figures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.example.Coordinate;
 import com.example.config.Color;
 
 public class Pawn extends Figure{
@@ -16,8 +17,10 @@ public class Pawn extends Figure{
     }
 
     @Override
-    void mekeMove() {
+    public void mekeMove(Coordinate coordinate) {
         logger.debug("Pawn is move");
+            this.x = coordinate.getColumn();
+            this.y = coordinate.getRow();
     }
     
 }

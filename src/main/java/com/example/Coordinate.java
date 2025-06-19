@@ -1,6 +1,6 @@
 package com.example;
 
 public interface Coordinate {
-    public int getX();
-    public char getY();
+    public int getRow();
+    public int getColumn();
 }

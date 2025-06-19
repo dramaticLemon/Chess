@@ -1,5 +1,6 @@
 package com.example.figures;
 
+import com.example.Coordinate;
 import com.example.config.Color;
 
 public abstract class Figure {
@@ -17,6 +18,6 @@ public abstract class Figure {
     }
 
     @SuppressWarnings("unused")
-    abstract void mekeMove();
+    abstract public void mekeMove(Coordinate coordinate);
 
 }

@@ -3,6 +3,7 @@ package com.example.figures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.example.Coordinate;
 import com.example.config.Color;
 
 public class Rook extends Figure{
@@ -16,7 +17,7 @@ public class Rook extends Figure{
     }
 
     @Override
-    void mekeMove() {
+    public void mekeMove(Coordinate coordinate) {
         logger.debug("Rook is move");
     }
     

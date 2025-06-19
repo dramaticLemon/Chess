@@ -2,3 +2,49 @@
 [15:17:20.393] [INFO ] [main] ConfigService - Initial Board object
 [15:18:58.290] [INFO ] [main] ConfigService - run program
 [15:18:58.292] [INFO ] [main] ConfigService - Initial Board object
+[21:12:42.864] [INFO ] [main] ConfigService - run program
+[21:12:42.866] [INFO ] [main] ConfigService - Initial Board object
+[21:14:25.831] [INFO ] [main] ConfigService - run program
+[21:14:25.835] [INFO ] [main] ConfigService - Initial Board object
+[21:14:29.416] [ERROR] [main] Coordinate - X coordinate must be between 1 and 8, get 49
+[21:15:06.716] [INFO ] [main] ConfigService - run program
+[21:15:06.718] [INFO ] [main] ConfigService - Initial Board object
+[21:15:08.013] [ERROR] [main] Coordinate - X coordinate must be between 1 and 8, get 1
+[21:17:37.742] [INFO ] [main] ConfigService - run program
+[21:17:37.744] [INFO ] [main] ConfigService - Initial Board object
+[21:17:38.481] [INFO ] [main] ConfigService - run program
+[21:17:38.483] [INFO ] [main] ConfigService - Initial Board object
+[21:17:45.983] [ERROR] [main] ValidateCoordinate - X coordinate must be between 1 and 8, got q
+[21:23:17.124] [INFO ] [main] ConfigService - run program
+[21:23:17.126] [INFO ] [main] ConfigService - Initial Board object
+[21:23:18.941] [ERROR] [main] ValidateCoordinate - X coordinate must be between 1 and 8, got 0
+[21:23:50.521] [INFO ] [main] ConfigService - run program
+[21:23:50.523] [INFO ] [main] ConfigService - Initial Board object
+[21:24:15.074] [INFO ] [main] ConfigService - run program
+[21:24:15.077] [INFO ] [main] ConfigService - Initial Board object
+[21:27:22.607] [INFO ] [main] ConfigService - run program
+[21:27:22.609] [INFO ] [main] ConfigService - Initial Board object
+[21:27:50.616] [INFO ] [main] ConfigService - run program
+[21:27:50.617] [INFO ] [main] ConfigService - Initial Board object
+[21:28:00.921] [INFO ] [main] ConfigService - run program
+[21:28:00.922] [INFO ] [main] ConfigService - Initial Board object
+[21:28:15.037] [INFO ] [main] ConfigService - run program
+[21:28:15.039] [INFO ] [main] ConfigService - Initial Board object
+[21:28:30.309] [INFO ] [main] ConfigService - run program
+[21:28:30.315] [INFO ] [main] ConfigService - Initial Board object
+[21:28:48.910] [INFO ] [main] ConfigService - run program
+[21:28:48.911] [INFO ] [main] ConfigService - Initial Board object
+[21:29:03.276] [INFO ] [main] ConfigService - run program
+[21:29:03.278] [INFO ] [main] ConfigService - Initial Board object
+[21:32:17.763] [INFO ] [main] ConfigService - run program
+[21:32:17.765] [INFO ] [main] ConfigService - Initial Board object
+[09:37:18.390] [INFO ] [main] ConfigService - run program
+[09:37:18.391] [INFO ] [main] ConfigService - Initial Board object
+[09:43:37.804] [INFO ] [main] ConfigService - run program
+[09:43:37.806] [INFO ] [main] ConfigService - Initial Board object
+[09:54:42.244] [INFO ] [main] ConfigService - run program
+[09:54:42.246] [INFO ] [main] ConfigService - Initial Board object
+[09:58:50.735] [INFO ] [main] ConfigService - run program
+[09:58:50.737] [INFO ] [main] ConfigService - Initial Board object
+[10:05:45.157] [INFO ] [main] ConfigService - run program
+[10:05:45.159] [INFO ] [main] ConfigService - Initial Board object

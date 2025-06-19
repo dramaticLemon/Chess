@@ -40,4 +40,10 @@ public class Board {
         }
         throw new IllegalArgumentException("Cannot place figure: Coordinates " + x + ", " + y + " are out of board bounds.");
     }
+
+    
+    // todo не должно быть прямого доступа у маммиву
+    public Figure[][] getBoard() {
+        return board;
+    }
 }

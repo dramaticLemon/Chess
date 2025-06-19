@@ -19,13 +19,12 @@ public class ConsoleCommandHandler {
                 continue;
             }
 
-            char yAlphaCoordinate = line.charAt(0);
-            char xNumericCoordinateChar = line.charAt(1);
+            char fileChar = line.charAt(0); // horizont
+            char rankChar = line.charAt(1); // vertical
 
-            int xNumericCoordinate = Character.getNumericValue(xNumericCoordinateChar);
             Coordinate coordinate;
             try {
-                coordinate = new ValidateCoordinate(xNumericCoordinate, yAlphaCoordinate);
+                coordinate = new ValidateCoordinate(fileChar, rankChar);
                 return coordinate;
             } catch (IllegalArgumentException e) {
                 System.out.println(e);
