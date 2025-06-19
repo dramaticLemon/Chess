@@ -3,7 +3,6 @@ package com.example.figures;
 import java.util.Set;
 
 import com.example.Coordinate;
-import com.example.CoordinateShif;
 import com.example.config.Color;
 
 public abstract class Figure {
@@ -23,6 +22,6 @@ public abstract class Figure {
     @SuppressWarnings("unused")
     abstract public void mekeMove(Coordinate coordinate);
 
-    abstract public Set<CoordinateShif> getPossibleMooves(Figure[][] board);
+    abstract public Set<Coordinate> getPossibleMooves(Figure[][] board);
 
 }

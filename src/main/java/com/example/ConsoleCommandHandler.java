@@ -18,12 +18,13 @@ public class ConsoleCommandHandler {
                 logger.debug("Invalid format");
                 continue;
             }
-
-            char fileChar = line.charAt(0); // horizont
-            char rankChar = line.charAt(1); // vertical
+            // d2 file + runk
+            char fileChar = line.charAt(0);
+            char rankChar = line.charAt(1);
 
             Coordinate coordinate;
             try {
+                // converting to matrix format
                 coordinate = new ValidateCoordinate(fileChar, rankChar);
                 return coordinate;
             } catch (IllegalArgumentException e) {

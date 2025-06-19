@@ -4,8 +4,12 @@ import com.example.board.Board;
 import com.example.config.Color;
 import com.example.figures.Figure;
 
-public class ConsoleRenderingBoard implements Render{
-    Board board = Board.getInstance();
+public class ConsoleRenderingBoard implements Render{    
+    Board board;
+
+    public ConsoleRenderingBoard(Board board) {
+        this.board = board;
+    }
 
     @Override
     public void render() {
@@ -21,6 +25,8 @@ public class ConsoleRenderingBoard implements Render{
             System.out.println("\033[0m");
         }
     }
+
+
 
     private char getSymbol(Figure figure) {
         char type = figure.getType();

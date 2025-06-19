@@ -7,9 +7,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.example.Coordinate;
-import com.example.CoordinateShif;
+import com.example.ValidateCoordinate;
 import com.example.config.Color;
 
+
+/**
+ * пешка доходит до края поля и больше ничего не происходит
+ */
 public class Pawn extends Figure{
     private static final Logger logger = LoggerFactory.getLogger(Pawn.class);
     private boolean isMoved;
@@ -24,10 +28,12 @@ public class Pawn extends Figure{
 
     @Override
     public void mekeMove(Coordinate coordinate) {
-        logger.debug("Pawn is move");
+        logger.info("Pawn is move");
+        if (!this.isMoved) {
+            this.isMoved = true;
+            logger.info(this.isMoved ? "Pawn has moved" : "Pawn has not moved yet");
+        }
         setCoordinate(coordinate);
-
-
     }
 
     private void setCoordinate(Coordinate coordinate) {
@@ -35,53 +41,53 @@ public class Pawn extends Figure{
         this.runk = coordinate.getRow();
     }
 
-    public void setMoved(boolean isMoved) {
-        this.isMoved = false;
-    }
-
-    public boolean isMoved() {
-        return this.isMoved;
-    }
-
+ 
     @Override
-    public Set<CoordinateShif> getPossibleMooves(Figure[][] board) {
-        Set<CoordinateShif> possibleMovCoordinateShifs = new HashSet<>();
+    public Set<Coordinate> getPossibleMooves(Figure[][] board) {
+        Set<Coordinate> possibleMovCoordinateShifs = new HashSet<>();
     
         int direction = (this.color == Color.WHITE) ? 1 : -1;
         int nextRowOneStep = this.runk - direction;
 
         if (nextRowOneStep >= 0 && nextRowOneStep < board.length) {
             
-            // один ход вперед
             if (board[nextRowOneStep][this.file] == null) {
-                possibleMovCoordinateShifs.add(new CoordinateShif(this.file, nextRowOneStep));
+                possibleMovCoordinateShifs.add(new ValidateCoordinate(nextRowOneStep, this.file));
             }
-            // два хода вперед
+
             int nextRowTwoSteps = this.runk - 2 * direction;
-            if (!isMoved() && nextRowTwoSteps >= 0 && nextRowTwoSteps < board.length) {
+            if (!this.isMoved && nextRowTwoSteps >= 0 && nextRowTwoSteps < board.length) {
                 if ( board[nextRowTwoSteps][this.file] == null ) {
-                    possibleMovCoordinateShifs.add(new CoordinateShif(this.file, nextRowTwoSteps));
+                    possibleMovCoordinateShifs.add(new ValidateCoordinate(nextRowTwoSteps, this.file));
                     }
                 }
             }
         
         int diagLeftRow = this.runk - direction;
         int diagLeftCol = this.file - 1;
-        diagonalMove(diagLeftRow, diagLeftCol, board, possibleMovCoordinateShifs);
+
+        // left
+        if (diagLeftRow >= 0 && diagLeftRow < board.length && diagLeftCol >= 0 && diagLeftCol < board.length) {
+            Figure targetPiece = board[diagLeftRow][diagLeftCol];
+            if (targetPiece != null && targetPiece.getColor() != this.color) {
+                   possibleMovCoordinateShifs.add(new ValidateCoordinate(diagLeftRow, diagLeftCol));
+
+            }
+        }
+    
+        // right
         int diagRightRow = this.runk - direction;
         int diagRightCol = this.file + 1;
-        diagonalMove(diagRightRow, diagRightCol, board, possibleMovCoordinateShifs);
-    
+
+        if (diagRightRow >= 0 && diagRightRow < board.length && diagRightCol >= 0 && diagRightCol < board.length) {
+            Figure targetPiece = board[diagRightRow][diagRightCol];
+            if (targetPiece != null && targetPiece.getColor() != this.color) {
+                possibleMovCoordinateShifs.add(new ValidateCoordinate(diagRightRow, diagRightCol));
+            }
+        }
         // TODO сделать проверку взятия на проходе
         return possibleMovCoordinateShifs;
     }
 
-    private void diagonalMove(int row, int col, Figure[][] board, Set<CoordinateShif> possibleMovCoordinateShifs) {
-        if (row >= 0 && row < board.length && col >= 0 && col < board.length) {
-            Figure targetPiece = board[row][col];
-            if (targetPiece != null && targetPiece.getColor() != this.color) {
-                possibleMovCoordinateShifs.add(new CoordinateShif(row, col));
-            }
-        }
-    }
+   
 }

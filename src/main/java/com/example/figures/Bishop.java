@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.example.Coordinate;
-import com.example.CoordinateShif;
 import com.example.config.Color;
 
 public class Bishop extends Figure{
@@ -26,8 +25,8 @@ public class Bishop extends Figure{
     }
     
     @Override
-    public Set<CoordinateShif> getPossibleMooves(Figure[][] board) {
-        Set<CoordinateShif> posibleMove = new HashSet<>();
+    public Set<Coordinate> getPossibleMooves(Figure[][] board) {
+        Set<Coordinate> posibleMove = new HashSet<>();
         return posibleMove;
     }
     

@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.example.Coordinate;
-import com.example.CoordinateShif;
 import com.example.config.Color;
 
 public class Knight extends Figure{
@@ -25,10 +24,9 @@ public class Knight extends Figure{
         logger.debug("Knight is move");
     }
 
-    @Override
-    public Set<CoordinateShif> getPossibleMooves(Figure[][] board) {
-        Set<CoordinateShif> posibleMove = new HashSet<>();
+   @Override
+    public Set<Coordinate> getPossibleMooves(Figure[][] board) {
+        Set<Coordinate> posibleMove = new HashSet<>();
         return posibleMove;
     }
-    
 }

@@ -1,180 +1,246 @@
-[15:17:20.391] [INFO ] [main] ConfigService - run program
-[15:17:20.393] [INFO ] [main] ConfigService - Initial Board object
-[15:18:58.290] [INFO ] [main] ConfigService - run program
-[15:18:58.292] [INFO ] [main] ConfigService - Initial Board object
-[21:12:42.864] [INFO ] [main] ConfigService - run program
-[21:12:42.866] [INFO ] [main] ConfigService - Initial Board object
-[21:14:25.831] [INFO ] [main] ConfigService - run program
-[21:14:25.835] [INFO ] [main] ConfigService - Initial Board object
-[21:14:29.416] [ERROR] [main] Coordinate - X coordinate must be between 1 and 8, get 49
-[21:15:06.716] [INFO ] [main] ConfigService - run program
-[21:15:06.718] [INFO ] [main] ConfigService - Initial Board object
-[21:15:08.013] [ERROR] [main] Coordinate - X coordinate must be between 1 and 8, get 1
-[21:17:37.742] [INFO ] [main] ConfigService - run program
-[21:17:37.744] [INFO ] [main] ConfigService - Initial Board object
-[21:17:38.481] [INFO ] [main] ConfigService - run program
-[21:17:38.483] [INFO ] [main] ConfigService - Initial Board object
-[21:17:45.983] [ERROR] [main] ValidateCoordinate - X coordinate must be between 1 and 8, got q
-[21:23:17.124] [INFO ] [main] ConfigService - run program
-[21:23:17.126] [INFO ] [main] ConfigService - Initial Board object
-[21:23:18.941] [ERROR] [main] ValidateCoordinate - X coordinate must be between 1 and 8, got 0
-[21:23:50.521] [INFO ] [main] ConfigService - run program
-[21:23:50.523] [INFO ] [main] ConfigService - Initial Board object
-[21:24:15.074] [INFO ] [main] ConfigService - run program
-[21:24:15.077] [INFO ] [main] ConfigService - Initial Board object
-[21:27:22.607] [INFO ] [main] ConfigService - run program
-[21:27:22.609] [INFO ] [main] ConfigService - Initial Board object
-[21:27:50.616] [INFO ] [main] ConfigService - run program
-[21:27:50.617] [INFO ] [main] ConfigService - Initial Board object
-[21:28:00.921] [INFO ] [main] ConfigService - run program
-[21:28:00.922] [INFO ] [main] ConfigService - Initial Board object
-[21:28:15.037] [INFO ] [main] ConfigService - run program
-[21:28:15.039] [INFO ] [main] ConfigService - Initial Board object
-[21:28:30.309] [INFO ] [main] ConfigService - run program
-[21:28:30.315] [INFO ] [main] ConfigService - Initial Board object
-[21:28:48.910] [INFO ] [main] ConfigService - run program
-[21:28:48.911] [INFO ] [main] ConfigService - Initial Board object
-[21:29:03.276] [INFO ] [main] ConfigService - run program
-[21:29:03.278] [INFO ] [main] ConfigService - Initial Board object
-[21:32:17.763] [INFO ] [main] ConfigService - run program
-[21:32:17.765] [INFO ] [main] ConfigService - Initial Board object
-[09:37:18.390] [INFO ] [main] ConfigService - run program
-[09:37:18.391] [INFO ] [main] ConfigService - Initial Board object
-[09:43:37.804] [INFO ] [main] ConfigService - run program
-[09:43:37.806] [INFO ] [main] ConfigService - Initial Board object
-[09:54:42.244] [INFO ] [main] ConfigService - run program
-[09:54:42.246] [INFO ] [main] ConfigService - Initial Board object
-[09:58:50.735] [INFO ] [main] ConfigService - run program
-[09:58:50.737] [INFO ] [main] ConfigService - Initial Board object
-[10:05:45.157] [INFO ] [main] ConfigService - run program
-[10:05:45.159] [INFO ] [main] ConfigService - Initial Board object
-[11:35:43.046] [INFO ] [main] ConfigService - run program
-[11:35:43.048] [INFO ] [main] ConfigService - Initial Board object
-[11:44:36.708] [INFO ] [main] ConfigService - run program
-[11:44:36.710] [INFO ] [main] ConfigService - Initial Board object
-[11:44:52.677] [INFO ] [main] ConfigService - run program
-[11:44:52.678] [INFO ] [main] ConfigService - Initial Board object
-[11:45:46.007] [INFO ] [main] ConfigService - run program
-[11:45:46.009] [INFO ] [main] ConfigService - Initial Board object
-[11:46:21.991] [INFO ] [main] ConfigService - run program
-[11:46:21.993] [INFO ] [main] ConfigService - Initial Board object
-[11:51:24.249] [INFO ] [main] ConfigService - run program
-[11:51:24.251] [INFO ] [main] ConfigService - Initial Board object
-[11:51:39.255] [INFO ] [main] ConfigService - run program
-[11:51:39.257] [INFO ] [main] ConfigService - Initial Board object
-[11:52:24.400] [INFO ] [main] ConfigService - run program
-[11:52:24.402] [INFO ] [main] ConfigService - Initial Board object
-[11:53:03.312] [INFO ] [main] ConfigService - run program
-[11:53:03.314] [INFO ] [main] ConfigService - Initial Board object
-[11:54:05.394] [INFO ] [main] ConfigService - run program
-[11:54:05.396] [INFO ] [main] ConfigService - Initial Board object
-[11:55:25.212] [INFO ] [main] ConfigService - run program
-[11:55:25.215] [INFO ] [main] ConfigService - Initial Board object
-[11:55:57.278] [INFO ] [main] ConfigService - run program
-[11:55:57.280] [INFO ] [main] ConfigService - Initial Board object
-[11:58:54.906] [INFO ] [main] ConfigService - run program
-[11:58:54.908] [INFO ] [main] ConfigService - Initial Board object
-[11:59:18.316] [INFO ] [main] ConfigService - run program
-[11:59:18.318] [INFO ] [main] ConfigService - Initial Board object
-[11:59:53.231] [INFO ] [main] ConfigService - run program
-[11:59:53.233] [INFO ] [main] ConfigService - Initial Board object
-[12:00:35.740] [INFO ] [main] ConfigService - run program
-[12:00:35.742] [INFO ] [main] ConfigService - Initial Board object
-[12:02:48.514] [INFO ] [main] ConfigService - run program
-[12:02:48.516] [INFO ] [main] ConfigService - Initial Board object
-[12:04:26.279] [INFO ] [main] ConfigService - run program
-[12:04:26.281] [INFO ] [main] ConfigService - Initial Board object
-[12:05:07.151] [INFO ] [main] ConfigService - run program
-[12:05:07.154] [INFO ] [main] ConfigService - Initial Board object
-[12:05:46.949] [INFO ] [main] ConfigService - run program
-[12:05:46.951] [INFO ] [main] ConfigService - Initial Board object
-[12:06:21.116] [INFO ] [main] ConfigService - run program
-[12:06:21.118] [INFO ] [main] ConfigService - Initial Board object
-[12:07:14.826] [INFO ] [main] ConfigService - run program
-[12:07:14.828] [INFO ] [main] ConfigService - Initial Board object
-[12:07:36.027] [INFO ] [main] ConfigService - run program
-[12:07:36.030] [INFO ] [main] ConfigService - Initial Board object
-[12:08:11.916] [INFO ] [main] ConfigService - run program
-[12:08:11.917] [INFO ] [main] ConfigService - Initial Board object
-[12:09:30.114] [INFO ] [main] ConfigService - run program
-[12:09:30.116] [INFO ] [main] ConfigService - Initial Board object
-[12:10:14.960] [INFO ] [main] ConfigService - run program
-[12:10:14.962] [INFO ] [main] ConfigService - Initial Board object
-[12:12:50.855] [INFO ] [main] ConfigService - run program
-[12:12:50.857] [INFO ] [main] ConfigService - Initial Board object
-[12:15:50.778] [INFO ] [main] ConfigService - run program
-[12:15:50.780] [INFO ] [main] ConfigService - Initial Board object
-[12:16:47.554] [INFO ] [main] ConfigService - run program
-[12:16:47.557] [INFO ] [main] ConfigService - Initial Board object
-[12:18:55.014] [INFO ] [main] ConfigService - run program
-[12:18:55.017] [INFO ] [main] ConfigService - Initial Board object
-[12:22:06.992] [INFO ] [main] ConfigService - run program
-[12:22:06.995] [INFO ] [main] ConfigService - Initial Board object
-[12:34:29.519] [INFO ] [main] ConfigService - run program
-[12:34:29.521] [INFO ] [main] ConfigService - Initial Board object
-[12:38:17.391] [INFO ] [main] ConfigService - run program
-[12:38:17.393] [INFO ] [main] ConfigService - Initial Board object
-[12:40:09.982] [INFO ] [main] ConfigService - run program
-[12:40:09.984] [INFO ] [main] ConfigService - Initial Board object
-[12:41:16.024] [INFO ] [main] ConfigService - run program
-[12:41:16.026] [INFO ] [main] ConfigService - Initial Board object
-[12:42:02.809] [INFO ] [main] ConfigService - run program
-[12:42:02.811] [INFO ] [main] ConfigService - Initial Board object
-[12:42:35.479] [INFO ] [main] ConfigService - run program
-[12:42:35.482] [INFO ] [main] ConfigService - Initial Board object
-[12:44:00.422] [INFO ] [main] ConfigService - run program
-[12:44:00.425] [INFO ] [main] ConfigService - Initial Board object
-[12:44:44.445] [INFO ] [main] ConfigService - run program
-[12:44:44.449] [INFO ] [main] ConfigService - Initial Board object
-[12:45:31.774] [INFO ] [main] ConfigService - run program
-[12:45:31.776] [INFO ] [main] ConfigService - Initial Board object
-[12:49:01.970] [INFO ] [main] ConfigService - run program
-[12:49:01.973] [INFO ] [main] ConfigService - Initial Board object
-[12:49:49.972] [INFO ] [main] ConfigService - run program
-[12:49:49.975] [INFO ] [main] ConfigService - Initial Board object
-[12:52:11.953] [INFO ] [main] ConfigService - run program
-[12:52:11.956] [INFO ] [main] ConfigService - Initial Board object
-[12:52:51.401] [INFO ] [main] ConfigService - run program
-[12:52:51.404] [INFO ] [main] ConfigService - Initial Board object
-[12:54:04.343] [INFO ] [main] ConfigService - run program
-[12:54:04.346] [INFO ] [main] ConfigService - Initial Board object
-[12:56:09.118] [INFO ] [main] ConfigService - run program
-[12:56:09.121] [INFO ] [main] ConfigService - Initial Board object
-[12:58:06.493] [INFO ] [main] ConfigService - run program
-[12:58:06.498] [INFO ] [main] ConfigService - Initial Board object
-[12:58:37.568] [INFO ] [main] ConfigService - run program
-[12:58:37.571] [INFO ] [main] ConfigService - Initial Board object
-[12:58:59.591] [INFO ] [main] ConfigService - run program
-[12:58:59.594] [INFO ] [main] ConfigService - Initial Board object
-[12:59:13.097] [INFO ] [main] ConfigService - run program
-[12:59:13.099] [INFO ] [main] ConfigService - Initial Board object
-[12:59:42.913] [INFO ] [main] ConfigService - run program
-[12:59:42.915] [INFO ] [main] ConfigService - Initial Board object
-[13:00:27.628] [INFO ] [main] ConfigService - run program
-[13:00:27.631] [INFO ] [main] ConfigService - Initial Board object
-[13:01:51.000] [INFO ] [main] ConfigService - run program
-[13:01:51.003] [INFO ] [main] ConfigService - Initial Board object
-[13:02:17.017] [INFO ] [main] ConfigService - run program
-[13:02:17.019] [INFO ] [main] ConfigService - Initial Board object
-[13:02:51.801] [INFO ] [main] ConfigService - run program
-[13:02:51.804] [INFO ] [main] ConfigService - Initial Board object
-[13:03:21.063] [INFO ] [main] ConfigService - run program
-[13:03:21.066] [INFO ] [main] ConfigService - Initial Board object
-[13:03:46.857] [INFO ] [main] ConfigService - run program
-[13:03:46.860] [INFO ] [main] ConfigService - Initial Board object
-[13:06:30.513] [INFO ] [main] ConfigService - run program
-[13:06:30.516] [INFO ] [main] ConfigService - Initial Board object
-[13:07:32.069] [INFO ] [main] ConfigService - run program
-[13:07:32.072] [INFO ] [main] ConfigService - Initial Board object
-[13:19:08.670] [INFO ] [main] ConfigService - run program
-[13:19:08.675] [INFO ] [main] ConfigService - Initial Board object
-[13:19:45.576] [INFO ] [main] ConfigService - run program
-[13:19:45.579] [INFO ] [main] ConfigService - Initial Board object
-[13:38:27.441] [INFO ] [main] ConfigService - run program
-[13:38:27.443] [INFO ] [main] ConfigService - Initial Board object
-[13:40:30.778] [INFO ] [main] ConfigService - run program
-[13:40:30.781] [INFO ] [main] ConfigService - Initial Board object
-[13:40:39.862] [INFO ] [main] ConfigService - run program
-[13:40:39.864] [INFO ] [main] ConfigService - Initial Board object
-[13:48:46.247] [INFO ] [main] ConfigService - run program
-[13:48:46.249] [INFO ] [main] ConfigService - Initial Board object
+[15:07:39.908] [INFO ] [main] ConfigService - run program
+[15:07:39.909] [INFO ] [main] ConfigService - Initial Board object
+[15:08:39.951] [INFO ] [main] ConfigService - run program
+[15:08:39.954] [INFO ] [main] ConfigService - Initial Board object
+[15:08:52.279] [INFO ] [main] ConfigService - run program
+[15:08:52.281] [INFO ] [main] ConfigService - Initial Board object
+[15:10:37.982] [INFO ] [main] ConfigService - run program
+[15:10:37.984] [INFO ] [main] ConfigService - Initial Board object
+[15:11:04.272] [INFO ] [main] ConfigService - run program
+[15:11:04.274] [INFO ] [main] ConfigService - Initial Board object
+[15:11:55.792] [INFO ] [main] ConfigService - run program
+[15:11:55.794] [INFO ] [main] ConfigService - Initial Board object
+[15:12:49.615] [INFO ] [main] ConfigService - run program
+[15:12:49.617] [INFO ] [main] ConfigService - Initial Board object
+[15:12:53.635] [INFO ] [main] Pawn - Pawn is move
+[15:12:53.635] [INFO ] [main] Pawn - Pawn has moved
+[15:14:12.670] [INFO ] [main] ConfigService - run program
+[15:14:12.672] [INFO ] [main] ConfigService - Initial Board object
+[15:14:18.135] [INFO ] [main] Pawn - Pawn is move
+[15:14:18.135] [INFO ] [main] Pawn - Pawn has moved
+[15:14:25.319] [INFO ] [main] Pawn - Pawn is move
+[15:14:31.606] [INFO ] [main] Pawn - Pawn is move
+[15:15:58.241] [INFO ] [main] Pawn - Pawn is move
+[15:16:12.012] [INFO ] [main] Pawn - Pawn is move
+[15:16:12.012] [INFO ] [main] Pawn - Pawn has moved
+[15:16:17.646] [INFO ] [main] Pawn - Pawn is move
+[15:16:22.379] [INFO ] [main] Pawn - Pawn is move
+[15:16:37.751] [INFO ] [main] Pawn - Pawn is move
+[15:17:27.121] [INFO ] [main] ConfigService - run program
+[15:17:27.124] [INFO ] [main] ConfigService - Initial Board object
+[15:17:36.985] [INFO ] [main] Pawn - Pawn is move
+[15:17:36.986] [INFO ] [main] Pawn - Pawn has moved
+[15:17:50.407] [INFO ] [main] Pawn - Pawn is move
+[15:19:40.687] [INFO ] [main] Pawn - Pawn is move
+[15:23:02.173] [INFO ] [main] ConfigService - run program
+[15:23:02.176] [INFO ] [main] ConfigService - Initial Board object
+[15:23:05.694] [INFO ] [main] Pawn - Pawn is move
+[15:23:05.694] [INFO ] [main] Pawn - Pawn has moved
+[15:23:10.225] [INFO ] [main] Pawn - Pawn is move
+[15:23:13.998] [INFO ] [main] Pawn - Pawn is move
+[15:24:20.937] [INFO ] [main] ConfigService - run program
+[15:24:20.939] [INFO ] [main] ConfigService - Initial Board object
+[15:24:26.561] [INFO ] [main] Pawn - Pawn is move
+[15:24:26.562] [INFO ] [main] Pawn - Pawn has moved
+[15:24:30.424] [INFO ] [main] Pawn - Pawn is move
+[15:24:33.772] [INFO ] [main] Pawn - Pawn is move
+[15:26:30.867] [INFO ] [main] ConfigService - run program
+[15:26:30.870] [INFO ] [main] ConfigService - Initial Board object
+[15:26:32.757] [ERROR] [main] ValidateCoordinate - Y coordinate must be one of: a, b, c, d, e, f, g, h.Get в
+[15:26:36.440] [INFO ] [main] Pawn - Pawn is move
+[15:26:36.440] [INFO ] [main] Pawn - Pawn has moved
+[15:26:39.694] [INFO ] [main] Pawn - Pawn is move
+[15:26:44.223] [INFO ] [main] Pawn - Pawn is move
+[15:26:54.401] [INFO ] [main] Pawn - Pawn is move
+[15:27:06.016] [INFO ] [main] Pawn - Pawn is move
+[15:31:25.629] [INFO ] [main] ConfigService - run program
+[15:31:25.631] [INFO ] [main] ConfigService - Initial Board object
+[15:31:32.821] [INFO ] [main] Pawn - Pawn is move
+[15:31:32.821] [INFO ] [main] Pawn - Pawn has moved
+[15:31:41.368] [INFO ] [main] Pawn - Pawn is move
+[15:32:14.201] [INFO ] [main] ConfigService - run program
+[15:32:14.203] [INFO ] [main] ConfigService - Initial Board object
+[15:32:19.928] [INFO ] [main] Pawn - Pawn is move
+[15:32:19.928] [INFO ] [main] Pawn - Pawn has moved
+[15:33:53.657] [INFO ] [main] ConfigService - run program
+[15:33:53.659] [INFO ] [main] ConfigService - Initial Board object
+[15:33:58.745] [INFO ] [main] Pawn - Pawn is move
+[15:33:58.746] [INFO ] [main] Pawn - Pawn has moved
+[15:34:21.858] [INFO ] [main] ConfigService - run program
+[15:34:21.859] [INFO ] [main] ConfigService - Initial Board object
+[15:34:24.644] [INFO ] [main] Pawn - Pawn is move
+[15:34:24.644] [INFO ] [main] Pawn - Pawn has moved
+[15:34:36.931] [INFO ] [main] Pawn - Pawn is move
+[15:34:36.931] [INFO ] [main] Pawn - Pawn has moved
+[15:34:57.704] [INFO ] [main] Pawn - Pawn is move
+[15:34:57.705] [INFO ] [main] Pawn - Pawn has moved
+[15:35:08.350] [INFO ] [main] Pawn - Pawn is move
+[16:06:12.396] [INFO ] [main] ConfigService - run program
+[16:06:12.398] [INFO ] [main] ConfigService - Initial Board object
+[16:07:05.937] [INFO ] [main] ConfigService - run program
+[16:07:05.940] [INFO ] [main] ConfigService - Initial Board object
+[16:08:16.056] [INFO ] [main] ConfigService - run program
+[16:08:16.058] [INFO ] [main] ConfigService - Initial Board object
+[16:11:10.032] [INFO ] [main] ConfigService - run program
+[16:11:10.034] [INFO ] [main] ConfigService - Initial Board object
+[16:11:41.621] [INFO ] [main] ConfigService - run program
+[16:11:41.624] [INFO ] [main] ConfigService - Initial Board object
+[16:11:56.429] [INFO ] [main] ConfigService - run program
+[16:11:56.431] [INFO ] [main] ConfigService - Initial Board object
+[16:13:00.171] [INFO ] [main] ConfigService - run program
+[16:13:00.173] [INFO ] [main] ConfigService - Initial Board object
+[16:13:01.584] [ERROR] [main] ValidateCoordinate - X coordinate must be between 1 and 8, got d
+[16:13:02.310] [ERROR] [main] ValidateCoordinate - X coordinate must be between 1 and 8, got d
+[16:13:49.890] [INFO ] [main] ConfigService - run program
+[16:13:49.892] [INFO ] [main] ConfigService - Initial Board object
+[16:13:59.682] [INFO ] [main] ConfigService - run program
+[16:13:59.684] [INFO ] [main] ConfigService - Initial Board object
+[16:14:29.173] [INFO ] [main] ConfigService - run program
+[16:14:29.175] [INFO ] [main] ConfigService - Initial Board object
+[16:18:44.209] [INFO ] [main] ConfigService - run program
+[16:18:44.212] [INFO ] [main] ConfigService - Initial Board object
+[16:19:15.561] [INFO ] [main] ConfigService - run program
+[16:19:15.563] [INFO ] [main] ConfigService - Initial Board object
+[16:19:39.148] [INFO ] [main] ConfigService - run program
+[16:19:39.150] [INFO ] [main] ConfigService - Initial Board object
+[16:20:19.393] [INFO ] [main] ConfigService - run program
+[16:20:19.395] [INFO ] [main] ConfigService - Initial Board object
+[16:21:55.275] [INFO ] [main] ConfigService - run program
+[16:21:55.277] [INFO ] [main] ConfigService - Initial Board object
+[16:22:33.600] [INFO ] [main] ConfigService - run program
+[16:22:33.602] [INFO ] [main] ConfigService - Initial Board object
+[16:23:13.006] [INFO ] [main] ConfigService - run program
+[16:23:13.009] [INFO ] [main] ConfigService - Initial Board object
+[16:24:24.383] [INFO ] [main] ConfigService - run program
+[16:24:24.385] [INFO ] [main] ConfigService - Initial Board object
+[16:25:53.674] [INFO ] [main] ConfigService - run program
+[16:25:53.676] [INFO ] [main] ConfigService - Initial Board object
+[16:27:25.839] [INFO ] [main] ConfigService - run program
+[16:27:25.841] [INFO ] [main] ConfigService - Initial Board object
+[16:27:52.429] [INFO ] [main] ConfigService - run program
+[16:27:52.431] [INFO ] [main] ConfigService - Initial Board object
+[16:27:55.485] [INFO ] [main] Pawn - Pawn is move
+[16:27:55.485] [INFO ] [main] Pawn - Pawn has moved
+[16:28:32.740] [INFO ] [main] Pawn - Pawn is move
+[16:28:32.740] [INFO ] [main] Pawn - Pawn has moved
+[16:29:04.470] [INFO ] [main] ConfigService - run program
+[16:29:04.472] [INFO ] [main] ConfigService - Initial Board object
+[16:29:08.650] [INFO ] [main] Pawn - Pawn is move
+[16:29:08.651] [INFO ] [main] Pawn - Pawn has moved
+[16:29:17.737] [INFO ] [main] Pawn - Pawn is move
+[16:29:17.737] [INFO ] [main] Pawn - Pawn has moved
+[16:29:32.337] [INFO ] [main] Pawn - Pawn is move
+[16:29:32.338] [INFO ] [main] Pawn - Pawn has moved
+[16:29:48.679] [INFO ] [main] Pawn - Pawn is move
+[16:29:48.680] [INFO ] [main] Pawn - Pawn has moved
+[16:31:18.704] [INFO ] [main] ConfigService - run program
+[16:31:18.706] [INFO ] [main] ConfigService - Initial Board object
+[16:31:23.300] [INFO ] [main] Pawn - Pawn is move
+[16:31:23.301] [INFO ] [main] Pawn - Pawn has moved
+[16:31:37.289] [INFO ] [main] Pawn - Pawn is move
+[16:31:37.289] [INFO ] [main] Pawn - Pawn has moved
+[16:32:20.319] [INFO ] [main] Pawn - Pawn is move
+[16:32:32.976] [INFO ] [main] Pawn - Pawn is move
+[16:32:32.976] [INFO ] [main] Pawn - Pawn has moved
+[16:32:44.379] [INFO ] [main] Pawn - Pawn is move
+[16:32:55.399] [INFO ] [main] Pawn - Pawn is move
+[16:32:55.399] [INFO ] [main] Pawn - Pawn has moved
+[16:33:10.169] [INFO ] [main] Pawn - Pawn is move
+[16:34:13.151] [INFO ] [main] ConfigService - run program
+[16:34:13.153] [INFO ] [main] ConfigService - Initial Board object
+[16:34:22.778] [INFO ] [main] Pawn - Pawn is move
+[16:34:22.779] [INFO ] [main] Pawn - Pawn has moved
+[16:34:30.498] [INFO ] [main] Pawn - Pawn is move
+[16:34:30.499] [INFO ] [main] Pawn - Pawn has moved
+[16:35:06.774] [INFO ] [main] Pawn - Pawn is move
+[16:35:19.577] [INFO ] [main] Pawn - Pawn is move
+[16:35:25.578] [INFO ] [main] Pawn - Pawn is move
+[16:35:49.999] [INFO ] [main] Pawn - Pawn is move
+[16:36:16.465] [INFO ] [main] Pawn - Pawn is move
+[16:38:05.446] [INFO ] [main] ConfigService - run program
+[16:38:05.449] [INFO ] [main] ConfigService - Initial Board object
+[16:38:13.217] [INFO ] [main] Pawn - Pawn is move
+[16:38:13.217] [INFO ] [main] Pawn - Pawn has moved
+[16:39:23.713] [INFO ] [main] ConfigService - run program
+[16:39:23.715] [INFO ] [main] ConfigService - Initial Board object
+[16:39:29.967] [INFO ] [main] Pawn - Pawn is move
+[16:39:29.968] [INFO ] [main] Pawn - Pawn has moved
+[16:40:33.051] [INFO ] [main] ConfigService - run program
+[16:40:33.053] [INFO ] [main] ConfigService - Initial Board object
+[16:40:50.343] [INFO ] [main] ConfigService - run program
+[16:40:50.345] [INFO ] [main] ConfigService - Initial Board object
+[16:40:53.068] [INFO ] [main] Pawn - Pawn is move
+[16:40:53.068] [INFO ] [main] Pawn - Pawn has moved
+[16:41:51.178] [INFO ] [main] ConfigService - run program
+[16:41:51.181] [INFO ] [main] ConfigService - Initial Board object
+[16:42:03.763] [INFO ] [main] ConfigService - run program
+[16:42:03.765] [INFO ] [main] ConfigService - Initial Board object
+[16:45:08.334] [INFO ] [main] ConfigService - run program
+[16:45:08.336] [INFO ] [main] ConfigService - Initial Board object
+[16:51:12.473] [INFO ] [main] ConfigService - run program
+[16:51:12.475] [INFO ] [main] ConfigService - Initial Board object
+[17:43:21.719] [INFO ] [main] ConfigService - run program
+[17:43:21.721] [INFO ] [main] ConfigService - Initial Board object
+[17:48:10.836] [INFO ] [main] ConfigService - Initial Board object
+[17:49:09.376] [INFO ] [main] ConfigService - Initial Board object
+[17:50:01.902] [INFO ] [main] ConfigService - Initial Board object
+[17:50:18.675] [INFO ] [main] ConfigService - Initial Board object
+[17:50:49.573] [INFO ] [main] ConfigService - Initial Board object
+[17:51:35.683] [INFO ] [main] ConfigService - Initial Board object
+[17:51:47.522] [INFO ] [main] ConfigService - Initial Board object
+[17:51:55.758] [INFO ] [main] ConfigService - Initial Board object
+[17:52:30.655] [INFO ] [main] ConfigService - Initial Board object
+[17:53:03.739] [INFO ] [main] ConfigService - Initial Board object
+[17:54:24.843] [INFO ] [main] ConfigService - Initial Board object
+[17:54:36.669] [INFO ] [main] ConfigService - Initial Board object
+[17:54:42.056] [INFO ] [main] ConfigService - Initial Board object
+[17:55:47.052] [INFO ] [main] ConfigService - run program
+[17:55:47.054] [INFO ] [main] ConfigService - Initial Board object
+[17:58:51.926] [INFO ] [main] ConfigService - run program
+[17:58:51.928] [INFO ] [main] ConfigService - Initial Board object
+[18:00:16.076] [INFO ] [main] ConfigService - run program
+[18:00:16.078] [INFO ] [main] ConfigService - Initial Board object
+[18:00:19.821] [INFO ] [main] Pawn - Pawn is move
+[18:00:19.821] [INFO ] [main] Pawn - Pawn has moved
+[18:00:34.438] [INFO ] [main] Pawn - Pawn is move
+[18:00:34.438] [INFO ] [main] Pawn - Pawn has moved
+[18:00:43.605] [INFO ] [main] Pawn - Pawn is move
+[18:00:43.605] [INFO ] [main] Pawn - Pawn has moved
+[18:00:57.170] [INFO ] [main] Pawn - Pawn is move
+[18:00:57.171] [INFO ] [main] Pawn - Pawn has moved
+[18:01:23.418] [INFO ] [main] Pawn - Pawn is move
+[18:01:38.857] [INFO ] [main] Pawn - Pawn is move
+[18:01:38.859] [INFO ] [main] Pawn - Pawn has moved
+[18:01:52.064] [INFO ] [main] Pawn - Pawn is move
+[18:01:52.065] [INFO ] [main] Pawn - Pawn has moved
+[18:02:21.889] [INFO ] [main] Pawn - Pawn is move
+[18:02:42.617] [INFO ] [main] Pawn - Pawn is move
+[18:03:01.831] [INFO ] [main] Pawn - Pawn is move
+[18:03:15.096] [INFO ] [main] Pawn - Pawn is move
+[18:03:35.663] [INFO ] [main] Pawn - Pawn is move
+[18:03:35.665] [INFO ] [main] Pawn - Pawn has moved
+[18:03:57.110] [INFO ] [main] Pawn - Pawn is move
+[18:04:07.417] [INFO ] [main] Pawn - Pawn is move
+[18:04:07.417] [INFO ] [main] Pawn - Pawn has moved
+[18:04:16.634] [INFO ] [main] Pawn - Pawn is move
+[18:04:26.997] [INFO ] [main] Pawn - Pawn is move
+[18:04:26.997] [INFO ] [main] Pawn - Pawn has moved
+[18:04:52.951] [INFO ] [main] Pawn - Pawn is move
+[18:08:39.703] [INFO ] [main] ConfigService - run program
+[18:08:39.705] [INFO ] [main] ConfigService - Initial Board object
+[18:10:57.874] [INFO ] [main] ConfigService - run program
+[18:10:57.876] [INFO ] [main] ConfigService - Initial Board object
+[18:12:22.184] [INFO ] [main] ConfigService - run program
+[18:12:22.185] [INFO ] [main] ConfigService - Initial Board object
+[18:12:38.152] [INFO ] [main] Pawn - Pawn is move
+[18:12:38.152] [INFO ] [main] Pawn - Pawn has moved
+[18:12:47.395] [INFO ] [main] Pawn - Pawn is move
+[18:12:47.395] [INFO ] [main] Pawn - Pawn has moved
+[18:12:59.706] [INFO ] [main] Pawn - Pawn is move
+[18:13:40.419] [INFO ] [main] ConfigService - run program
+[18:13:40.424] [INFO ] [main] ConfigService - Initial Board object
+[18:13:49.035] [INFO ] [main] Pawn - Pawn is move
+[18:13:49.035] [INFO ] [main] Pawn - Pawn has moved
+[18:13:54.057] [INFO ] [main] Pawn - Pawn is move
+[18:13:54.059] [INFO ] [main] Pawn - Pawn has moved
+[18:14:02.356] [INFO ] [main] Pawn - Pawn is move
