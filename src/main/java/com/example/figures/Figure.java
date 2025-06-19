@@ -1,11 +1,14 @@
 package com.example.figures;
 
+import java.util.Set;
+
 import com.example.Coordinate;
+import com.example.CoordinateShif;
 import com.example.config.Color;
 
 public abstract class Figure {
-    int x;
-    int y;
+    int file;
+    int runk;
     Color color;
     char type;
 
@@ -19,5 +22,7 @@ public abstract class Figure {
 
     @SuppressWarnings("unused")
     abstract public void mekeMove(Coordinate coordinate);
+
+    abstract public Set<CoordinateShif> getPossibleMooves(Figure[][] board);
 
 }

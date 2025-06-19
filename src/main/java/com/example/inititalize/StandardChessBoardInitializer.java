@@ -33,9 +33,9 @@ public class StandardChessBoardInitializer implements ChessBoardInitializer {
     }
 
     private void initialPawn(Figure[][] board) {
-        for (int x = 0; x < 8; x++) {
-            board[1][x] = new Pawn(x, 1, Color.BLACK);
-            board[6][x] = new Pawn(x, 6, Color.WHITE);
+        for (int row = 0; row < 8; row++) {
+            board[1][row] = new Pawn(row, 1, Color.BLACK);
+            board[6][row] = new Pawn(row, 6, Color.WHITE);
         }
     }
 

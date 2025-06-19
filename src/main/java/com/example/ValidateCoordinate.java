@@ -36,6 +36,11 @@ class ValidateCoordinate implements Coordinate{
         this.row = arr[0];
         this.col = arr[1];
     }
+
+    public ValidateCoordinate(int row, int col) {
+        this.col = col;
+        this.row = row;
+    }
     
     @Override
     public int getRow() {
