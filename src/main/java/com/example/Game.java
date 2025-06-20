@@ -4,7 +4,6 @@ import java.util.Set;
 
 import com.example.board.Board;
 import com.example.config.Color;
-import com.example.figures.Bishop;
 import com.example.figures.Figure;
 import com.example.render.ConsoleRenderingBoard;
 import com.example.render.Render;
@@ -16,13 +15,8 @@ public class Game {
     boolean isGameOver = false;
 
     Color colorToMove = Color.WHITE;
-
     public void gemeLoop() {
         Figure[][] gameboard = bord.getBoard(); //  TODO не должно быть прямого доступа к массиву
-
-        Bishop bishop = new Bishop(3, 4, Color.WHITE);
-        gameboard[3][4] = bishop;
-
 
         while(!isGameOver) {
             System.out.println(colorToMove);
@@ -31,8 +25,12 @@ public class Game {
             Figure figure = bord.getFigureAt(coordinate.getColumn(), coordinate.getRow());
                
         
-            if (figure == null || figure.getColor() != this.colorToMove) {
-                System.out.println("Это не твоя фигура, босс. Ходи нормально.");
+            // if (figure == null || figure.getColor() != this.colorToMove) {
+            //     System.out.println("Это не твоя фигура, босс. Ходи нормально.");
+            //     continue;
+            // }
+            
+            if (figure == null) {
                 continue;
             }
 

@@ -21,7 +21,8 @@ public class Knight extends Figure{
 
     @Override
     public void mekeMove(Coordinate coordinate) {
-        logger.debug("Knight is move");
+        this.file = coordinate.getColumn();
+        this.runk = coordinate.getRow();
     }
 
    @Override
