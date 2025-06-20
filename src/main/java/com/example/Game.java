@@ -17,9 +17,7 @@ public class Game {
     Color colorToMove = Color.WHITE;
 
     public void gemeLoop() {
-        //  TODO не должно быть прямого доступа к массиву
-        Figure[][] gameboard = bord.getBoard();
-
+        
         while(!isGameOver) {
 
             if (colorToMove.equals(Color.WHITE)) {
@@ -44,7 +42,7 @@ public class Game {
 
               
 
-                Set<Coordinate> possibleMoves = figure.getPossibleMooves(gameboard);
+                Set<Coordinate> possibleMoves = figure.getPossibleMooves(bord.getView());
                 if (possibleMoves.isEmpty()) {
                     continue;
                 }
@@ -55,14 +53,14 @@ public class Game {
                     Coordinate coordinateToMove = commandHandler.getInputCoordinate();
 
                     if (possibleMoves.contains(coordinateToMove)) {
-                        Figure target = gameboard[coordinateToMove.getRow()][coordinateToMove.getColumn()];
+                        Figure target = bord.getFigureAt( coordinateToMove.getColumn(), coordinateToMove.getRow());
                         if (target != null && target.getType() == 'K') {
                             this.isGameOver = true;
                             System.out.println("WINED: " + this.colorToMove);
                         }
-                        gameboard[coordinate.getRow()][coordinate.getColumn()] = null; 
+                        bord.setFigure(null, coordinate.getRow(), coordinate.getColumn()); 
                         figure.mekeMove(coordinateToMove);
-                        gameboard[coordinateToMove.getRow()][coordinateToMove.getColumn()] = figure;
+                        bord.setFigure(figure, coordinateToMove.getRow(), coordinateToMove.getColumn());
                         break;
                     } else {
                         System.out.println("You can't go there. Try again.");

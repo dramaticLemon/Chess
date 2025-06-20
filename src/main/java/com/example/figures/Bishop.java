@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import com.example.Coordinate;
 import com.example.ValidateCoordinate;
+import com.example.board.UnmodifiableBoardView;
 import com.example.config.Color;
 
 public class Bishop extends Figure{
@@ -27,11 +28,11 @@ public class Bishop extends Figure{
     }
     
     @Override
-    public Set<Coordinate> getPossibleMooves(Figure[][] board) {
+    public Set<Coordinate> getPossibleMooves(UnmodifiableBoardView board) {
         Set<Coordinate> posibleMove = new HashSet<>();
 
-        int rows = board.length;
-        int cols = board[0].length;
+        int rows = board.getHeight();
+        int cols = board.getWidth();
         
        int[][] directionsLikeBishop = {{-1, 1}, {1, -1}, {-1, -1}, {1, 1}};
 
@@ -44,7 +45,7 @@ public class Bishop extends Figure{
             int c = this.file + dc;
             
             while (r >= 0 && r < rows && c >= 0 && c < cols) {
-                Figure target = board[r][c];
+                Figure target = board.get(c, r);
                 if (target == null) {
                     posibleMove.add(new ValidateCoordinate(r, c));
                 } else {

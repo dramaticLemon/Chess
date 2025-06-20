@@ -31,8 +31,9 @@ public class Board {
     }
 
     private static boolean isValidCoordinate(int coord) {
-        return coord >= 0 && coord <= 8;
+        return coord >= 0 && coord <= 7;
     }
+
 
     public Figure getFigureAt(int x, int y) {
         if (isValidCoordinate(x) && isValidCoordinate(y)) {
@@ -42,8 +43,15 @@ public class Board {
     }
 
     
-    // todo не должно быть прямого доступа у маммиву
-    public Figure[][] getBoard() {
-        return board;
+    public UnmodifiableBoardView getView() {
+        return new UnmodifiableBoardView(this.board);
+    }
+
+    public void setFigure(Figure figure, int x, int y) {
+        if (isValidCoordinate(x) && isValidCoordinate(y)) {
+            board[x][y] = figure;
+        } else {
+            throw new IllegalArgumentException("Cannot place figure: Coordinates " + x + ", " + y + " are out of board bounds.");
+        }
     }
 }

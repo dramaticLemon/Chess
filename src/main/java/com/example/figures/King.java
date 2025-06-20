@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import com.example.Coordinate;
 import com.example.ValidateCoordinate;
+import com.example.board.UnmodifiableBoardView;
 import com.example.config.Color;
 
 public class King extends Figure{
@@ -31,11 +32,11 @@ public class King extends Figure{
     }
 
     @Override
-    public Set<Coordinate> getPossibleMooves(Figure[][] board) {
+    public Set<Coordinate> getPossibleMooves(UnmodifiableBoardView board) {
         Set<Coordinate> posibleMove = new HashSet<>();
 
-        int rows = board.length;
-        int cols = board[0].length;
+        int rows = board.getHeight();
+        int cols = board.getWidth();
         
         int[][] directions = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1,0}, {1, 1}};
         
@@ -48,11 +49,11 @@ public class King extends Figure{
             int r = this.runk + dc;
 
             if (r >= 0 && r < rows && c >= 0 && c < cols) {
-                if (board[r][c] == null) {
+                if (board.get(c, r) == null) {
                     posibleMove.add(new ValidateCoordinate(r, c));
                 }
                 else {
-                    if (board[r][c].color != this.color) {
+                    if (board.get(c, r).color != this.color) {
                         posibleMove.add(new ValidateCoordinate(r, c));
                     }
                 }
