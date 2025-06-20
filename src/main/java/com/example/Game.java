@@ -37,8 +37,9 @@ public class Game {
             while (true) {
                 System.out.println("Введите координаты для перемещения фигуры");
                 Set<Coordinate> possibleMoves = figure.getPossibleMooves(gameboard);
-                System.out.println(possibleMoves + " possible moves");
-                Coordinate coordinateToMove =  commandHandler.getInputCoordinate();
+                // System.out.println(possibleMoves + " possible moves");
+                render.renderCoordinate(possibleMoves);
+                Coordinate coordinateToMove = commandHandler.getInputCoordinate();
                 if (possibleMoves.contains(coordinateToMove)) {
                     gameboard[coordinate.getRow()][coordinate.getColumn()] = null; 
                     figure.mekeMove(coordinateToMove);

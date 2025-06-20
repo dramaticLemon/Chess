@@ -33,33 +33,30 @@ public class Bishop extends Figure{
         int rows = board.length;
         int cols = board[0].length;
         
-        // возможные ходы по вертикалям
-        int[][] directions = {{-1, 1}, {1, -1}, {-1, -1}, {1, 1}};
+       int[][] directionsLikeBishop = {{-1, 1}, {1, -1}, {-1, -1}, {1, 1}};
 
-        for (int[] direction : directions) {
+        for (int[] direction : directionsLikeBishop) {
             int dr = direction[0];
             int dc = direction[1];
             
 
-            int r = file + dr;
-            int c = runk + dc;
+            int r = this.runk + dr;
+            int c = this.file + dc;
             
             while (r >= 0 && r < rows && c >= 0 && c < cols) {
-
-                    if (board[r][c] == null) {
+                Figure target = board[r][c];
+                if (target == null) {
+                    posibleMove.add(new ValidateCoordinate(r, c));
+                } else {
+                    if (target.color != this.color) {
                         posibleMove.add(new ValidateCoordinate(r, c));
                     }
-                    else {
-                        if (board[r][c].color != this.color) {
-                            posibleMove.add(new ValidateCoordinate(r, c));
-                            break;
-
-                        }
-                    }
-                    r += dr;
-                    c += dc;
-                }
+                    break;
             }
+            r += dr;
+            c += dc;
+            }
+        }
         return posibleMove;
     }
     

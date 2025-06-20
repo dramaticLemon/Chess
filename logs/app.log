@@ -115,3 +115,61 @@
 [13:04:10.498] [INFO ] [main] ConfigService - run program
 [13:04:10.500] [INFO ] [main] ConfigService - Initial Board object
 [13:04:19.717] [INFO ] [main] Pawn - Pawn is move
+[13:18:21.452] [INFO ] [main] ConfigService - run program
+[13:18:21.454] [INFO ] [main] ConfigService - Initial Board object
+[13:18:31.684] [INFO ] [main] Pawn - Pawn is move
+[13:20:10.647] [INFO ] [main] ConfigService - run program
+[13:20:10.649] [INFO ] [main] ConfigService - Initial Board object
+[13:20:15.836] [INFO ] [main] Pawn - Pawn is move
+[13:22:45.751] [INFO ] [main] ConfigService - run program
+[13:22:45.754] [INFO ] [main] ConfigService - Initial Board object
+[13:23:02.471] [INFO ] [main] Pawn - Pawn is move
+[13:23:18.987] [INFO ] [main] ConfigService - run program
+[13:23:18.990] [INFO ] [main] ConfigService - Initial Board object
+[13:23:27.800] [INFO ] [main] Pawn - Pawn is move
+[13:26:10.575] [INFO ] [main] ConfigService - run program
+[13:26:10.578] [INFO ] [main] ConfigService - Initial Board object
+[13:26:22.789] [INFO ] [main] Pawn - Pawn is move
+[13:29:12.931] [INFO ] [main] ConfigService - run program
+[13:29:12.934] [INFO ] [main] ConfigService - Initial Board object
+[13:29:22.433] [INFO ] [main] Pawn - Pawn is move
+[13:30:54.712] [INFO ] [main] ConfigService - run program
+[13:30:54.715] [INFO ] [main] ConfigService - Initial Board object
+[13:30:59.650] [INFO ] [main] Pawn - Pawn is move
+[13:32:05.492] [ERROR] [main] ValidateCoordinate - X coordinate must be between 1 and 8, got e
+[13:32:21.342] [INFO ] [main] ConfigService - run program
+[13:32:21.345] [INFO ] [main] ConfigService - Initial Board object
+[13:32:30.074] [INFO ] [main] Pawn - Pawn is move
+[13:33:38.959] [INFO ] [main] ConfigService - run program
+[13:33:38.961] [INFO ] [main] ConfigService - Initial Board object
+[13:33:43.899] [INFO ] [main] Pawn - Pawn is move
+[13:34:28.833] [INFO ] [main] ConfigService - run program
+[13:34:28.836] [INFO ] [main] ConfigService - Initial Board object
+[13:34:33.267] [INFO ] [main] Pawn - Pawn is move
+[13:34:55.190] [INFO ] [main] ConfigService - run program
+[13:34:55.192] [INFO ] [main] ConfigService - Initial Board object
+[13:35:31.780] [INFO ] [main] Pawn - Pawn is move
+[13:36:23.364] [INFO ] [main] Pawn - Pawn is move
+[13:37:59.719] [INFO ] [main] ConfigService - run program
+[13:37:59.721] [INFO ] [main] ConfigService - Initial Board object
+[13:38:03.336] [ERROR] [main] ValidateCoordinate - Y coordinate must be one of: a, b, c, d, e, f, g, h.Get A
+[13:38:12.738] [INFO ] [main] Pawn - Pawn is move
+[13:39:12.887] [INFO ] [main] ConfigService - run program
+[13:39:12.889] [INFO ] [main] ConfigService - Initial Board object
+[13:39:21.409] [INFO ] [main] Pawn - Pawn is move
+[13:39:40.099] [INFO ] [main] ConfigService - run program
+[13:39:40.102] [INFO ] [main] ConfigService - Initial Board object
+[13:41:05.023] [INFO ] [main] ConfigService - run program
+[13:41:05.025] [INFO ] [main] ConfigService - Initial Board object
+[13:41:10.510] [INFO ] [main] Pawn - Pawn is move
+[13:43:59.536] [INFO ] [main] ConfigService - run program
+[13:43:59.538] [INFO ] [main] ConfigService - Initial Board object
+[13:44:03.298] [INFO ] [main] Pawn - Pawn is move
+[13:45:58.839] [INFO ] [main] ConfigService - run program
+[13:45:58.842] [INFO ] [main] ConfigService - Initial Board object
+[13:46:03.334] [INFO ] [main] Pawn - Pawn is move
+[13:46:27.308] [INFO ] [main] ConfigService - run program
+[13:46:27.311] [INFO ] [main] ConfigService - Initial Board object
+[13:46:30.579] [INFO ] [main] Pawn - Pawn is move
+[13:47:06.347] [INFO ] [main] Pawn - Pawn is move
+[13:48:40.900] [INFO ] [main] Pawn - Pawn is move

@@ -53,7 +53,7 @@ public class Queen extends Figure{
                     if (target.color != this.color) {
                         posibleMove.add(new ValidateCoordinate(r, c));
                     }
-                    break; // в любом случае — своя или вражеская — стоп
+                    break;
             }
             r += dr;
             c += dc;
@@ -70,18 +70,17 @@ public class Queen extends Figure{
             int c = this.file + dc;
             
             while (r >= 0 && r < rows && c >= 0 && c < cols) {
-                if (board[r][c] == null) {
+                 Figure target = board[r][c];
+                if (target == null) {
                     posibleMove.add(new ValidateCoordinate(r, c));
-                }
-                else {
-                    if (board[r][c].color != this.color) {
+                } else {
+                    if (target.color != this.color) {
                         posibleMove.add(new ValidateCoordinate(r, c));
-                        break;
-
                     }
-                }
-                r += dr;
-                c += dc;
+                    break;
+            }
+            r += dr;
+            c += dc;
             }
         }
 

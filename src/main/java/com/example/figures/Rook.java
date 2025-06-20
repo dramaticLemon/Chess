@@ -22,41 +22,42 @@ public class Rook extends Figure{
 
     @Override
     public void mekeMove(Coordinate coordinate) {
-        this.runk = coordinate.getColumn();
-        this.file = coordinate.getRow();
+        this.file = coordinate.getColumn();
+        this.runk = coordinate.getRow();
     }
 
     @Override
     public Set<Coordinate> getPossibleMooves(Figure[][] board) {
+
         Set<Coordinate> posibleMove = new HashSet<>();
         int rows = board.length;
         int cols = board[0].length;
         
-        int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         
-        for (int[] direction : directions) {
+         int[][] directionsLikeRook = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+        
+        for (int[] direction : directionsLikeRook) {
             int dr = direction[0];
             int dc = direction[1];
             
-            int r = file + dr;
-            int c = runk + dc;
+            int r = this.runk + dr;
+            int c = this.file + dc;
             
             while (r >= 0 && r < rows && c >= 0 && c < cols) {
-                if (board[r][c] == null) {
+                Figure target = board[r][c];
+                if (target == null) {
                     posibleMove.add(new ValidateCoordinate(r, c));
-                }
-                else {
-                    if (board[r][c].color != this.color) {
+                } else {
+                    if (target.color != this.color) {
                         posibleMove.add(new ValidateCoordinate(r, c));
-                        break;
-
                     }
-                }
-                r += dr;
-                c += dc;
+                    break;
+            }
+            r += dr;
+            c += dc;
             }
         }
-               
+
         return posibleMove;
     }
     
