@@ -11,6 +11,6 @@ public class Main {
     public static void main(String[] args) {
         logger.info("run program");
         Game game = new Game();
-        game.gemeLoop();
+        game.gemeLoop();   
     }
 }

@@ -4,15 +4,10 @@ package com.example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Вводные координаты + валидация
- * Y X 
- * y - выбираем букву
- * х - выбираем цифру
- */
+
 public class ValidateCoordinate implements Coordinate{
-    private int row; // vertical
-    private int col; // horizontal
+    private int row; 
+    private int col; 
     private static final Logger logger = LoggerFactory.getLogger(ValidateCoordinate.class);
     private final static char[] VALID_Y_COORDINATES = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
 
@@ -79,11 +74,13 @@ public class ValidateCoordinate implements Coordinate{
         if (getClass() != obj.getClass())
             return false;
         ValidateCoordinate other = (ValidateCoordinate) obj;
-        if (row != other.row)
+        if (row == other.row || col == other.col) {
+        } else {
             return false;
-        if (col != other.col)
-            return false;
+        }
         return true;
     }
+
+   
     
 } 

@@ -1,0 +1,25 @@
+h  <-
+l  ->
+i  ↓
+k  ↑
+число перед буквой (пеместиться на такое количество слов)
+
+$ перемещение в курсора в конец строки
+shift + - (дефиз) перемешение курсора в начало строки
+нажатие нуля в режиме перемещение курсора вернят в абсолютное началос строки
+
+w - перемещаться по словам ( начало слова вперед, курсор в конец кадого слова)
+e - перемещение по словам (курсор в начало каждого слова )
+b - перемещаться по словам ( начало слова назад курсор в начале слова )
+i
+worem ipsum dolor sit amet, qui blanditis praesentium voluptatum 
+deleniti atque corrupti, quos dolores et quas molestias excepturi sint, 
+nisi ut aliquid ex ea commodi consequatur.
+rt eero ros et accusamus et iusto odio dignissimos ducimus, 
+quia voluptas sit, aspernatur aut odit aut fugit, sed quia olores eos, 
+qui ratione voluptatem sequi nesciunt, neque porro quisquam est, sed do 
+eiusmod tempor incididunt ut labore et dolore magna aliqua? Lorem ipsum 
+dolor sit amet, qui in ea voluptate velit esse, quam nihil molestiae 
+consequatur, vel illum, qus nostrud exercitation ullamco laboris nisi ut 
+
+liquip ex ea commodo consequat.

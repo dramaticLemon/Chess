@@ -20,7 +20,6 @@ public abstract class Figure {
         return this.color;
     }
 
-    @SuppressWarnings("unused")
     abstract public void mekeMove(Coordinate coordinate);
 
     abstract public Set<Coordinate> getPossibleMooves(UnmodifiableBoardView board);

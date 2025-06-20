@@ -12,9 +12,6 @@ import com.example.board.UnmodifiableBoardView;
 import com.example.config.Color;
 
 
-/**
- * пешка доходит до края поля и больше ничего не происходит
- */
 public class Pawn extends Figure{
     private static final Logger logger = LoggerFactory.getLogger(Pawn.class);
     private boolean isMoved;
@@ -40,7 +37,6 @@ public class Pawn extends Figure{
         this.file = coordinate.getColumn();
         this.runk = coordinate.getRow();
     }
-
  
     @Override
     public Set<Coordinate> getPossibleMooves(UnmodifiableBoardView board) {
@@ -55,7 +51,7 @@ public class Pawn extends Figure{
                 possibleMovCoordinateShifs.add(new ValidateCoordinate(nextRowOneStep, this.file));
             }
 
-            int nextRowTwoSteps = this.runk - 2 * direction;
+                    int nextRowTwoSteps = this.runk - 2 * direction;
             if (!this.isMoved && nextRowTwoSteps >= 0 && nextRowTwoSteps < board.getHeight()) {
                 if (board.get(this.file, nextRowOneStep)  == null ) {
                     possibleMovCoordinateShifs.add(new ValidateCoordinate(nextRowTwoSteps, this.file));
@@ -84,7 +80,7 @@ public class Pawn extends Figure{
                 possibleMovCoordinateShifs.add(new ValidateCoordinate(diagRightRow, diagRightCol));
             }
         }
-        // TODO сделать взятия на проходе
+        // сделать взятия на проходе
         return possibleMovCoordinateShifs;
     }
 

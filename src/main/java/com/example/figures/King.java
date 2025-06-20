@@ -3,16 +3,12 @@ package com.example.figures;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.example.Coordinate;
 import com.example.ValidateCoordinate;
 import com.example.board.UnmodifiableBoardView;
 import com.example.config.Color;
 
 public class King extends Figure{
-    private static final Logger logger = LoggerFactory.getLogger(King.class);
 
     public King(int file, int runk, Color color) {
         this.file = file;
