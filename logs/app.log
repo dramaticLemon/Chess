@@ -189,3 +189,15 @@
 [14:26:48.015] [INFO ] [main] ConfigService - Initial Board object
 [14:26:58.591] [INFO ] [main] Pawn - Pawn is move
 [14:27:10.411] [INFO ] [main] Pawn - Pawn is move
+[14:35:20.642] [INFO ] [main] ConfigService - run program
+[14:35:20.644] [INFO ] [main] ConfigService - Initial Board object
+[14:36:21.373] [INFO ] [main] ConfigService - run program
+[14:36:21.375] [INFO ] [main] ConfigService - Initial Board object
+[14:39:17.508] [INFO ] [main] ConfigService - run program
+[14:39:17.512] [INFO ] [main] ConfigService - Initial Board object
+[14:39:32.675] [INFO ] [main] Pawn - Pawn is move
+[14:40:23.766] [INFO ] [main] ConfigService - run program
+[14:40:23.768] [INFO ] [main] ConfigService - Initial Board object
+[14:40:35.798] [INFO ] [main] Pawn - Pawn is move
+[14:40:50.276] [INFO ] [main] Pawn - Pawn is move
+[14:41:16.567] [INFO ] [main] Pawn - Pawn is move

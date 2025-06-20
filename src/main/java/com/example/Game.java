@@ -17,7 +17,8 @@ public class Game {
     Color colorToMove = Color.WHITE;
 
     public void gemeLoop() {
-        Figure[][] gameboard = bord.getBoard(); //  TODO не должно быть прямого доступа к массиву
+        //  TODO не должно быть прямого доступа к массиву
+        Figure[][] gameboard = bord.getBoard();
 
         while(!isGameOver) {
 
@@ -32,18 +33,16 @@ public class Game {
             Coordinate coordinate;
             Figure figure;
 
-            while (true) {
+            while (!isGameOver) {
                 coordinate =  commandHandler.getInputCoordinate();
                 figure = bord.getFigureAt(coordinate.getColumn(), coordinate.getRow());
                 
-                // if (figure == null || figure.getColor() != this.colorToMove) {
-                //     System.out.println("Это не твоя фигура, босс. Ходи нормально.");
-                //     continue;
-                // }
-
-                if (figure == null) {
+                if (figure == null || figure.getColor() != this.colorToMove) {
+                    System.out.println("Wrong colr figure, select again");
                     continue;
                 }
+
+              
 
                 Set<Coordinate> possibleMoves = figure.getPossibleMooves(gameboard);
                 if (possibleMoves.isEmpty()) {
@@ -51,11 +50,16 @@ public class Game {
                 }
                 render.renderCoordinate(possibleMoves);
 
-                while (true) {
+                while (!isGameOver) {
                     System.out.println("Enter Coordinte to move: ");
                     Coordinate coordinateToMove = commandHandler.getInputCoordinate();
 
                     if (possibleMoves.contains(coordinateToMove)) {
+                        Figure target = gameboard[coordinateToMove.getRow()][coordinateToMove.getColumn()];
+                        if (target != null && target.getType() == 'K') {
+                            this.isGameOver = true;
+                            System.out.println("WINED: " + this.colorToMove);
+                        }
                         gameboard[coordinate.getRow()][coordinate.getColumn()] = null; 
                         figure.mekeMove(coordinateToMove);
                         gameboard[coordinateToMove.getRow()][coordinateToMove.getColumn()] = figure;
@@ -69,9 +73,7 @@ public class Game {
                 break;
             }
 
-            swapColorToMove();
-        
-           
+            swapColorToMove();   
         }
             
     }
