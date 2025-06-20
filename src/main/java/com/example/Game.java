@@ -15,43 +15,66 @@ public class Game {
     boolean isGameOver = false;
 
     Color colorToMove = Color.WHITE;
+
     public void gemeLoop() {
         Figure[][] gameboard = bord.getBoard(); //  TODO не должно быть прямого доступа к массиву
 
         while(!isGameOver) {
-            System.out.println(colorToMove);
-            render.render();
-            Coordinate coordinate =  commandHandler.getInputCoordinate();
-            Figure figure = bord.getFigureAt(coordinate.getColumn(), coordinate.getRow());
-               
-        
-            // if (figure == null || figure.getColor() != this.colorToMove) {
-            //     System.out.println("Это не твоя фигура, босс. Ходи нормально.");
-            //     continue;
-            // }
-            
-            if (figure == null) {
-                continue;
+
+            if (colorToMove.equals(Color.WHITE)) {
+                System.out.println("======WHITE MOVE======");
+            } else {
+                System.out.println("======BLACK MOVE======");
             }
 
+            render.render();
+
+            Coordinate coordinate;
+            Figure figure;
+
             while (true) {
-                System.out.println("Введите координаты для перемещения фигуры");
+                coordinate =  commandHandler.getInputCoordinate();
+                figure = bord.getFigureAt(coordinate.getColumn(), coordinate.getRow());
+                
+                // if (figure == null || figure.getColor() != this.colorToMove) {
+                //     System.out.println("Это не твоя фигура, босс. Ходи нормально.");
+                //     continue;
+                // }
+
+                if (figure == null) {
+                    continue;
+                }
+
                 Set<Coordinate> possibleMoves = figure.getPossibleMooves(gameboard);
-                // System.out.println(possibleMoves + " possible moves");
+                if (possibleMoves.isEmpty()) {
+                    continue;
+                }
                 render.renderCoordinate(possibleMoves);
-                Coordinate coordinateToMove = commandHandler.getInputCoordinate();
-                if (possibleMoves.contains(coordinateToMove)) {
-                    gameboard[coordinate.getRow()][coordinate.getColumn()] = null; 
-                    figure.mekeMove(coordinateToMove);
-                    gameboard[coordinateToMove.getRow()][coordinateToMove.getColumn()] = figure;
-                    break;
+
+                while (true) {
+                    System.out.println("Enter Coordinte to move: ");
+                    Coordinate coordinateToMove = commandHandler.getInputCoordinate();
+
+                    if (possibleMoves.contains(coordinateToMove)) {
+                        gameboard[coordinate.getRow()][coordinate.getColumn()] = null; 
+                        figure.mekeMove(coordinateToMove);
+                        gameboard[coordinateToMove.getRow()][coordinateToMove.getColumn()] = figure;
+                        break;
+                    } else {
+                        System.out.println("You can't go there. Try again.");
+                    }
+                    
                 }
-              
-                }
-            swapColorToMove();
+
+                break;
             }
-            
+
+            swapColorToMove();
+        
+           
         }
+            
+    }
 
     private void swapColorToMove() {
         if (this.colorToMove == Color.WHITE) {
