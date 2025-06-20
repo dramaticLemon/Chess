@@ -5,7 +5,7 @@ import java.util.Set;
 import com.example.board.Board;
 import com.example.config.Color;
 import com.example.figures.Figure;
-import com.example.figures.Pawn;
+import com.example.figures.Rook;
 import com.example.render.ConsoleRenderingBoard;
 import com.example.render.Render;
 
@@ -19,15 +19,18 @@ public class Game {
 
     public void gemeLoop() {
         Figure[][] gameboard = bord.getBoard(); //  TODO не должно быть прямого доступа к массиву
-        Pawn pawn = new Pawn(2, 2, Color.WHITE);
-        gameboard[2][2] = pawn;
+
+        Rook rock = new Rook(3, 4, Color.WHITE);
+        gameboard[3][4] = rock;
+
+
         while(!isGameOver) {
             System.out.println(colorToMove);
             render.render();
             Coordinate coordinate =  commandHandler.getInputCoordinate();
             Figure figure = bord.getFigureAt(coordinate.getColumn(), coordinate.getRow());
-
-
+               
+        
             if (figure == null || figure.getColor() != this.colorToMove) {
                 System.out.println("Это не твоя фигура, босс. Ходи нормально.");
                 continue;

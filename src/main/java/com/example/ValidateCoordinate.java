@@ -38,7 +38,6 @@ public class ValidateCoordinate implements Coordinate{
     }
 
     public ValidateCoordinate(int row, int col) {
-        // int[] arr = Converter.convertToCoordinates(row, col);
         this.row = row;
         this.col = col;
     }

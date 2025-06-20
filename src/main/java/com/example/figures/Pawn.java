@@ -23,7 +23,7 @@ public class Pawn extends Figure{
         this.runk = runk; 
         this.color = color;
         this.type = 'P';
-        this.isMoved = false; // по умолчанию пешка еще не двигалась
+        this.isMoved = false;
     }
 
     @Override
@@ -31,7 +31,6 @@ public class Pawn extends Figure{
         logger.info("Pawn is move");
         if (!this.isMoved) {
             this.isMoved = true;
-            logger.info(this.isMoved ? "Pawn has moved" : "Pawn has not moved yet");
         }
         setCoordinate(coordinate);
     }
@@ -85,7 +84,7 @@ public class Pawn extends Figure{
                 possibleMovCoordinateShifs.add(new ValidateCoordinate(diagRightRow, diagRightCol));
             }
         }
-        // TODO сделать проверку взятия на проходе
+        // TODO сделать взятия на проходе
         return possibleMovCoordinateShifs;
     }
 
