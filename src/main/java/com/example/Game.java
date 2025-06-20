@@ -4,8 +4,8 @@ import java.util.Set;
 
 import com.example.board.Board;
 import com.example.config.Color;
+import com.example.figures.Bishop;
 import com.example.figures.Figure;
-import com.example.figures.Rook;
 import com.example.render.ConsoleRenderingBoard;
 import com.example.render.Render;
 
@@ -20,8 +20,8 @@ public class Game {
     public void gemeLoop() {
         Figure[][] gameboard = bord.getBoard(); //  TODO не должно быть прямого доступа к массиву
 
-        Rook rock = new Rook(3, 4, Color.WHITE);
-        gameboard[3][4] = rock;
+        Bishop bishop = new Bishop(3, 4, Color.WHITE);
+        gameboard[3][4] = bishop;
 
 
         while(!isGameOver) {
