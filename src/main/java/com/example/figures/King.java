@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.example.Coordinate;
+import com.example.FigureType;
 import com.example.ValidateCoordinate;
 import com.example.board.UnmodifiableBoardView;
 import com.example.config.Color;
@@ -14,7 +15,7 @@ public class King extends Figure{
         this.file = file;
         this.runk = runk;
         this.color = color;
-        this.type = 'K';
+        this.type = FigureType.KING;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.example.render;
 import java.util.Set;
 
 import com.example.Coordinate;
+import com.example.FigureType;
 import com.example.ValidateCoordinate;
 import com.example.board.Board;
 import com.example.config.Color;
@@ -65,16 +66,16 @@ public class ConsoleRenderingBoard implements Render{
     }
 
     private char getSymbol(Figure figure) {
-        char type = figure.getType();
+        FigureType type = figure.getType();
         boolean isWhite = figure.getColor() == Color.WHITE;
 
         return switch (type) {
-            case 'K' -> isWhite ? '♔' : '♚';
-            case 'Q' -> isWhite ? '♕' : '♛';
-            case 'R' -> isWhite ? '♖' : '♜';
-            case 'B' -> isWhite ? '♗' : '♝';
-            case 'N' -> isWhite ? '♘' : '♞';
-            case 'P' -> isWhite ? '♙' : '♟';
+            case KING -> isWhite ? '♔' : '♚';
+            case QUEEN  -> isWhite ? '♕' : '♛';
+            case ROOK -> isWhite ? '♖' : '♜';
+            case BISHOP -> isWhite ? '♗' : '♝';
+            case KNIGHT -> isWhite ? '♘' : '♞';
+            case PAWN -> isWhite ? '♙' : '♟';
             default -> '?';
         };
 

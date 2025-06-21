@@ -54,7 +54,8 @@ public class Game {
 
                     if (possibleMoves.contains(coordinateToMove)) {
                         Figure target = bord.getFigureAt( coordinateToMove.getColumn(), coordinateToMove.getRow());
-                        if (target != null && target.getType() == 'K') {
+                        if (target != null && target.getType() == FigureType.KING) {
+                    
                             this.isGameOver = true;
                             System.out.println("WINED: " + this.colorToMove);
                         }
@@ -73,7 +74,7 @@ public class Game {
 
             swapColorToMove();   
         }
-            
+           
     }
 
     private void swapColorToMove() {

@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.example.Coordinate;
+import com.example.FigureType;
 import com.example.ValidateCoordinate;
 import com.example.board.UnmodifiableBoardView;
 import com.example.config.Color;
@@ -14,7 +15,7 @@ public class Bishop extends Figure{
         this.file = x;
         this.runk = y;
         this.color = color;
-        this.type = 'B';
+        this.type = FigureType.BISHOP;
     }
 
     @Override
