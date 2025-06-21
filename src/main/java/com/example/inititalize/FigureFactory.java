@@ -1,4 +1,4 @@
-package com.example;
+package com.example.inititalize;
 
 import com.example.config.Color;
 import com.example.figures.Figure;

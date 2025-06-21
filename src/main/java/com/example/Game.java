@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Set;
 
 import com.example.board.Board;
@@ -14,7 +16,17 @@ public class Game {
     ConsoleCommandHandler commandHandler = new ConsoleCommandHandler();
     boolean isGameOver = false;
 
+    public static final Map<FigureType, Integer> blackLostFigures = new LinkedHashMap<>();
+    public static final Map<FigureType, Integer> whiteLostFigures = new LinkedHashMap<>();
+    
     Color colorToMove = Color.WHITE;
+
+    static {
+        for (FigureType type : FigureType.values()) {
+            blackLostFigures.put(type, 0);
+            whiteLostFigures.put(type, 0);
+        }
+    }
 
     public void gemeLoop() {
         
@@ -26,7 +38,10 @@ public class Game {
                 System.out.println("======BLACK MOVE======");
             }
 
+            render.renderLoseFigure(whiteLostFigures, Color.WHITE);
             render.render();
+            render.renderLoseFigure(blackLostFigures, Color.BLACK);
+
 
             Coordinate coordinate;
             Figure figure;
@@ -54,8 +69,20 @@ public class Game {
 
                     if (possibleMoves.contains(coordinateToMove)) {
                         Figure target = bord.getFigureAt( coordinateToMove.getColumn(), coordinateToMove.getRow());
+
+                       
+                        if (target != null) {
+                            FigureType type = target.getType();
+                            Color capturedColor = target.getColor();
+
+                            if (capturedColor == Color.WHITE) {
+                                whiteLostFigures.put(type, whiteLostFigures.get(type) + 1);
+                            } else {
+                                blackLostFigures.put(type, blackLostFigures.get(type) + 1);
+                            }
+                        }
+
                         if (target != null && target.getType() == FigureType.KING) {
-                    
                             this.isGameOver = true;
                             System.out.println("WINED: " + this.colorToMove);
                         }
@@ -63,6 +90,7 @@ public class Game {
                         figure.mekeMove(coordinateToMove);
                         bord.setFigure(figure, coordinateToMove.getRow(), coordinateToMove.getColumn());
                         break;
+                        
                     } else {
                         System.out.println("You can't go there. Try again.");
                     }

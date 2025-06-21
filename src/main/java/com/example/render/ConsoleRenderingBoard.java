@@ -1,5 +1,6 @@
 package com.example.render;
 
+import java.util.Map;
 import java.util.Set;
 
 import com.example.Coordinate;
@@ -11,6 +12,24 @@ import com.example.figures.Figure;
 
 public class ConsoleRenderingBoard implements Render{    
     Board board;
+
+    private static final Map<FigureType, Character> WHITE_SYMBOLS = Map.of(
+    FigureType.KING, '♔',
+    FigureType.QUEEN, '♕',
+    FigureType.ROOK, '♖',
+    FigureType.BISHOP, '♗',
+    FigureType.KNIGHT, '♘',
+    FigureType.PAWN, '♙'
+    );
+
+    private static final Map<FigureType, Character> BLACK_SYMBOLS = Map.of(
+        FigureType.KING, '♚',
+        FigureType.QUEEN, '♛',
+        FigureType.ROOK, '♜',
+        FigureType.BISHOP, '♝',
+        FigureType.KNIGHT, '♞',
+        FigureType.PAWN, '♟'
+    );
 
     public ConsoleRenderingBoard(Board board) {
         this.board = board;
@@ -64,6 +83,21 @@ public class ConsoleRenderingBoard implements Render{
         System.out.println();
         }
     }
+
+    @Override
+    public void renderLoseFigure(Map<FigureType, Integer> map, Color color) {
+        Map<FigureType, Character> symbols = (color == Color.WHITE) ? WHITE_SYMBOLS : BLACK_SYMBOLS;
+        for (FigureType type : FigureType.values()) {
+            int count = map.getOrDefault(type, 0);
+            if (count > 0) {
+                char symbol = symbols.get(type);
+                System.out.print(symbol + " x" + count + " ");
+            }
+        }
+        System.out.println();
+    }
+
+
 
     private char getSymbol(Figure figure) {
         FigureType type = figure.getType();

@@ -1,5 +1,7 @@
 package com.example;
 
+
+// расположение в логическом порядке
 public enum FigureType {
-    PAWN, ROOK, KNIGHT, BISHOP, QUEEN, KING, EMPTY
+    PAWN, KNIGHT, BISHOP, ROOK, QUEEN, KING
 }

@@ -1,6 +1,5 @@
 package com.example.inititalize;
 
-import com.example.ChessFigureFactory;
 import com.example.FigureType;
 import com.example.config.Color;
 import com.example.figures.Figure;

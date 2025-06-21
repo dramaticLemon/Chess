@@ -1,8 +1,9 @@
-package com.example;
+package com.example.inititalize;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import com.example.FigureType;
 import com.example.config.Color;
 import com.example.figures.Bishop;
 import com.example.figures.Figure;
