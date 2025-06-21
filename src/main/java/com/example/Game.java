@@ -58,9 +58,11 @@ public class Game {
               
 
                 Set<Coordinate> possibleMoves = figure.getPossibleMooves(bord.getView());
+
                 if (possibleMoves.isEmpty()) {
                     continue;
                 }
+                
                 render.renderCoordinate(possibleMoves);
 
                 while (!isGameOver) {
@@ -90,7 +92,7 @@ public class Game {
                         figure.mekeMove(coordinateToMove);
                         bord.setFigure(figure, coordinateToMove.getRow(), coordinateToMove.getColumn());
                         break;
-                        
+
                     } else {
                         System.out.println("You can't go there. Try again.");
                     }
