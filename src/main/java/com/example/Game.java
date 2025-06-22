@@ -1,117 +1,56 @@
 package com.example;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
+
+import java.util.List;
 
 import com.example.board.Board;
+import com.example.board.Move;
 import com.example.config.Color;
-import com.example.figures.Figure;
-import com.example.render.ConsoleRenderingBoard;
-import com.example.render.Render;
+import com.example.render.BoardConsoleRenderer;
+
 
 public class Game {
-    Board bord = Board.getInstance();
-    Render render = new ConsoleRenderingBoard(bord);
-    ConsoleCommandHandler commandHandler = new ConsoleCommandHandler();
-    boolean isGameOver = false;
+    private final Board board;
+    private final BoardConsoleRenderer render = new BoardConsoleRenderer();
 
-    public static final Map<FigureType, Integer> blackLostFigures = new LinkedHashMap<>();
-    public static final Map<FigureType, Integer> whiteLostFigures = new LinkedHashMap<>();
-    
-    Color colorToMove = Color.WHITE;
+    private final List<GameStateChecker> checkers = List.of(
+        new StatemateGameStateChecker(),
+        new CheckMateGameStateChecker()
+    );
 
-    static {
-        for (FigureType type : FigureType.values()) {
-            blackLostFigures.put(type, 0);
-            whiteLostFigures.put(type, 0);
-        }
+    public Game(Board board) {
+        this.board = board;
     }
 
-    public void gemeLoop() {
-        
-        while(!isGameOver) {
-
-            if (colorToMove.equals(Color.WHITE)) {
-                System.out.println("======WHITE MOVE======");
+    public void gameLoop() {
+        Color colorToMove = Color.WHITE;
+        GameState state = determineGameState(board, colorToMove);
+        // board.setutDefaulFigurePositons();
+        while (state == GameState.ONGOING) { 
+            render.render(board);
+            
+            if (colorToMove == Color.WHITE) {
+                System.out.println("White to move");
             } else {
-                System.out.println("======BLACK MOVE======");
+                System.out.println("Black to move");
             }
 
-            render.renderLoseFigure(whiteLostFigures, Color.WHITE);
-            render.render();
-            render.renderLoseFigure(blackLostFigures, Color.BLACK);
+            Move move =  ConsoleCommandHandler.imputMove(board, colorToMove, render);
+            board.makeMove(move); // обновить саму доску
+            colorToMove = colorToMove.swap();
+        }
+        render.render(board);
+        System.out.println("The game ended");
+    }
 
+   private GameState determineGameState(Board board, Color color) {
+        for (GameStateChecker checker : checkers) {
+            GameState state = checker.check(board, color);
 
-            Coordinate coordinate;
-            Figure figure;
-
-            while (!isGameOver) {
-                coordinate =  commandHandler.getInputCoordinate();
-                figure = bord.getFigureAt(coordinate.getColumn(), coordinate.getRow());
-                
-                if (figure == null || figure.getColor() != this.colorToMove) {
-                    System.out.println("Wrong colr figure, select again");
-                    continue;
-                }
-
-              
-
-                Set<Coordinate> possibleMoves = figure.getPossibleMooves(bord.getView());
-
-                if (possibleMoves.isEmpty()) {
-                    continue;
-                }
-                
-                render.renderCoordinate(possibleMoves);
-
-                while (!isGameOver) {
-                    System.out.println("Enter Coordinte to move: ");
-                    Coordinate coordinateToMove = commandHandler.getInputCoordinate();
-
-                    if (possibleMoves.contains(coordinateToMove)) {
-                        Figure target = bord.getFigureAt( coordinateToMove.getColumn(), coordinateToMove.getRow());
-
-                       
-                        if (target != null) {
-                            FigureType type = target.getType();
-                            Color capturedColor = target.getColor();
-
-                            if (capturedColor == Color.WHITE) {
-                                whiteLostFigures.put(type, whiteLostFigures.get(type) + 1);
-                            } else {
-                                blackLostFigures.put(type, blackLostFigures.get(type) + 1);
-                            }
-                        }
-
-                        if (target != null && target.getType() == FigureType.KING) {
-                            this.isGameOver = true;
-                            System.out.println("WINED: " + this.colorToMove);
-                        }
-                        bord.setFigure(null, coordinate.getRow(), coordinate.getColumn()); 
-                        figure.mekeMove(coordinateToMove);
-                        bord.setFigure(figure, coordinateToMove.getRow(), coordinateToMove.getColumn());
-                        break;
-
-                    } else {
-                        System.out.println("You can't go there. Try again.");
-                    }
-                    
-                }
-
-                break;
+            if (state != GameState.ONGOING) {
+                return state;
             }
-
-            swapColorToMove();   
         }
-           
-    }
-
-    private void swapColorToMove() {
-        if (this.colorToMove == Color.WHITE) {
-            this.colorToMove = Color.BLACK;
-        } else {
-            this.colorToMove = Color.WHITE;
-        }
-    }
+        return GameState.ONGOING;
+   }
 }

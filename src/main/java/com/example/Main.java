@@ -1,16 +1,21 @@
 package com.example;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.example.config.ConfigService;
+import com.example.board.Board;
+import com.example.board.BoardFactory;
 
 public class Main {
-    private static final Logger logger = LoggerFactory.getLogger(ConfigService.class);
-
     public static void main(String[] args) {
-        logger.info("run program");
-        Game game = new Game();
-        game.gemeLoop();   
+       Board board = (new BoardFactory()).fromFEN(
+                // "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+                // "3k4/8/5n2/2N5/3B4/8/8/3K4 w - - 0 1"
+                // "3k4/8/p7/8/R7/8/P7/3K4 w - - 0 1"
+                // "3k4/8/p5n1/5B2/R7/3P4/P7/3K4 w - - 0 1"
+
+                "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+        );
+
+        Game game = new Game(board);
+        game.gameLoop();
+    
     }
 }

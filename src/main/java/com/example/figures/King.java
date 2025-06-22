@@ -3,59 +3,47 @@ package com.example.figures;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.example.Coordinate;
+import com.example.Coordinates;
+import com.example.CoordinatesShift;
 import com.example.FigureType;
-import com.example.ValidateCoordinate;
-import com.example.board.UnmodifiableBoardView;
+import com.example.board.Board;
 import com.example.config.Color;
 
 public class King extends Figure{
 
-    public King(int file, int runk, Color color) {
-        this.file = file;
-        this.runk = runk;
-        this.color = color;
-        this.type = FigureType.KING;
+    public King (Coordinates coordinate, Color color) {
+        super(coordinate, color);
+        this.figureType = FigureType.KING;
     }
+    
 
     @Override
-    public void mekeMove(Coordinate coordinate) {
-        setCoordinate(coordinate);
-    }
+    public Set<CoordinatesShift> getFigureMoves() {
+        Set<CoordinatesShift> result = new HashSet<>();
 
-    private void setCoordinate(Coordinate coordinate) {
-        this.file = coordinate.getColumn();
-        this.runk = coordinate.getRow();
-    }
-
-    @Override
-    public Set<Coordinate> getPossibleMooves(UnmodifiableBoardView board) {
-        Set<Coordinate> posibleMove = new HashSet<>();
-
-        int rows = board.getHeight();
-        int cols = board.getWidth();
-        
-        int[][] directions = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1,0}, {1, 1}};
-        
-
-        for (int[] direction : directions) {
-            int dr = direction[0];
-            int dc = direction[1];
-            
-            int c = this.file + dr;
-            int r = this.runk + dc;
-
-            if (r >= 0 && r < rows && c >= 0 && c < cols) {
-                if (board.get(c, r) == null) {
-                    posibleMove.add(new ValidateCoordinate(r, c));
+        for (int fileShift = -1; fileShift <= 1; fileShift++) {
+            for (int rankShift = -1; rankShift <= 1; rankShift++) {
+                if ((fileShift == 0) && (rankShift == 0)) {
+                    continue;
                 }
-                else {
-                    if (board.get(c, r).color != this.color) {
-                        posibleMove.add(new ValidateCoordinate(r, c));
-                    }
-                }
+
+                result.add(new CoordinatesShift(fileShift, rankShift));
             }
         }
-        return posibleMove;
+
+        return result;
     }
+
+
+    @Override
+    protected boolean isSquareAvialableForMove(Coordinates coordinates, Board board) {
+        boolean result = super.isSquareAvialableForMove(coordinates, board);
+
+        if (result) {
+            return !board.isSquareAttakedByCollor(coordinates, color.swap());
+        }
+        return false;
+    }
+
+    
 }

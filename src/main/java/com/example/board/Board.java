@@ -1,57 +1,126 @@
 package com.example.board;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import com.example.config.ConfigService;
+import com.example.Coordinates;
+import com.example.FigureType;
+import com.example.File;
+import com.example.config.Color;
 import com.example.figures.Figure;
-import com.example.inititalize.ChessBoardInitializer;
-import com.example.inititalize.StandardChessBoardInitializer;
+import com.example.inititalize.ChessFigureFactory;
 
 public class Board {
-    private static Board instance;
-    private static final Logger logger = LoggerFactory.getLogger(ConfigService.class);
-    private static final int WIDTH_BOARD = 8;
-    private static final int HEIGHT_BOARD = 8;
+    public final String startingFen;
+    private final static Map<Coordinates, Figure> figures = new HashMap<>();
+    public List<Move> moves = new ArrayList<>();
+    // добавить новую фигуру в координату
 
-    private final Figure[][] board;
-
-    private Board() {
-        logger.info("Initial Board object");
-        board = new Figure[HEIGHT_BOARD][WIDTH_BOARD];
-        ChessBoardInitializer initializer = new StandardChessBoardInitializer();
-        initializer.initialize(board);
+    public Board(String startinFen) {
+        this.startingFen = startinFen;
     }
-    
-     public static Board getInstance() {
-        if (instance == null) {
-            instance = new Board();
+
+    public void setFigure(Coordinates coordinate, Figure figure) {
+        figure.coordinate = coordinate;
+        figures.put(coordinate, figure);
+    }
+
+    // получить фигуру по координатам
+    public static Figure getFigureAt(Coordinates coordinate) {
+        return figures.get(coordinate);
+    }
+
+    // проверка что клетка пустая
+    /*
+     * если такого ключа нету то значит клетка пустая
+     */
+    public boolean isSquareEmpty(Coordinates coordinate) {
+        return !figures.containsKey(coordinate);
+    }
+
+    public void setutDefaulFigurePositons()  {
+
+
+        for (File file: File.values()) {
+            Coordinates pawDefaultCootdinatedWhite = new Coordinates(file, 2);
+            Coordinates pawDefaultCootdinatedBlack = new Coordinates(file, 7);
+            setFigure(pawDefaultCootdinatedWhite, ChessFigureFactory.createFigure(FigureType.PAWN, pawDefaultCootdinatedWhite, Color.WHITE));
+            setFigure(pawDefaultCootdinatedBlack, ChessFigureFactory.createFigure(FigureType.PAWN, pawDefaultCootdinatedBlack, Color.BLACK));
+
         }
-        return instance;
+
+        setFigure(new Coordinates(File.A, 1), ChessFigureFactory.createFigure(FigureType.ROOK, new Coordinates(File.A, 1), Color.WHITE));
+        setFigure(new Coordinates(File.H, 1), ChessFigureFactory.createFigure(FigureType.ROOK, new Coordinates(File.H, 1), Color.WHITE));
+        setFigure(new Coordinates(File.A, 8), ChessFigureFactory.createFigure(FigureType.ROOK, new Coordinates(File.A, 8), Color.BLACK));
+        setFigure(new Coordinates(File.H, 8), ChessFigureFactory.createFigure(FigureType.ROOK, new Coordinates(File.H, 8), Color.BLACK));
+
+        // set knights
+        setFigure(new Coordinates(File.B, 1), ChessFigureFactory.createFigure(FigureType.KNIGHT, new Coordinates(File.B, 1), Color.WHITE));
+        setFigure(new Coordinates(File.G, 1), ChessFigureFactory.createFigure(FigureType.KNIGHT, new Coordinates(File.G, 1), Color.WHITE));
+        setFigure(new Coordinates(File.B, 8), ChessFigureFactory.createFigure(FigureType.KNIGHT, new Coordinates(File.B, 8), Color.BLACK));
+        setFigure(new Coordinates(File.G, 8), ChessFigureFactory.createFigure(FigureType.KNIGHT, new Coordinates(File.G, 8), Color.BLACK));
+
+
+        // set bishops
+        setFigure(new Coordinates(File.C, 1), ChessFigureFactory.createFigure(FigureType.BISHOP, new Coordinates(File.C, 1), Color.WHITE));
+        setFigure(new Coordinates(File.F, 1), ChessFigureFactory.createFigure(FigureType.BISHOP, new Coordinates(File.F, 1), Color.WHITE));
+        setFigure(new Coordinates(File.C, 8), ChessFigureFactory.createFigure(FigureType.BISHOP, new Coordinates(File.C, 8), Color.BLACK));
+        setFigure(new Coordinates(File.F, 8), ChessFigureFactory.createFigure(FigureType.BISHOP, new Coordinates(File.F, 8), Color.BLACK));
+        
+
+        // set queens
+        setFigure(new Coordinates(File.D, 1), ChessFigureFactory.createFigure(FigureType.QUEEN, new Coordinates(File.D, 1), Color.WHITE));
+        setFigure(new Coordinates(File.D, 8), ChessFigureFactory.createFigure(FigureType.QUEEN, new Coordinates(File.D, 1), Color.BLACK));
+
+        // set kings
+        setFigure(new Coordinates(File.E, 1),  ChessFigureFactory.createFigure(FigureType.KING, new Coordinates(File.E, 1), Color.WHITE));
+        setFigure(new Coordinates(File.E, 8),  ChessFigureFactory.createFigure(FigureType.KING, new Coordinates(File.E, 8), Color.BLACK));
+
     }
 
-    private static boolean isValidCoordinate(int coord) {
-        return coord >= 0 && coord <= 7;
+    public static boolean isSquareDark(Coordinates coordinates) {
+        return (((coordinates.file.ordinal() + 1) + coordinates.rank) % 2) == 0;
     }
 
+    public void makeMove(Move move) {
+        Figure figure = getFigureAt(move.from);
+        removeFigure(move.from);
+        setFigure(move.to, figure);
+        moves.add(move);
+        
+    }
 
-    public Figure getFigureAt(int x, int y) {
-        if (isValidCoordinate(x) && isValidCoordinate(y)) {
-            return board[y][x];
+    private void removeFigure(Coordinates coordinates) {
+        figures.remove(coordinates);
+    }  
+
+
+    public List<Figure> getFiguresByColor(Color color) {
+        List<Figure> result = new ArrayList<>();
+
+        for (Figure figure : figures.values()) {
+            if (figure.color == color) {
+                result.add(figure);
+            }
         }
-        throw new IllegalArgumentException("Cannot place figure: Coordinates " + x + ", " + y + " are out of board bounds.");
+        
+        return result;
     }
 
-    
-    public UnmodifiableBoardView getView() {
-        return new UnmodifiableBoardView(this.board);
-    }
+    public boolean isSquareAttakedByCollor(Coordinates coordinates, Color color) {
+        List<Figure> figures = getFiguresByColor(color);
+        
+        for (Figure figure : figures) {
+            Set<Coordinates> attackedSquares = figure.getAttackedSquares(this);
 
-    public void setFigure(Figure figure, int x, int y) {
-        if (isValidCoordinate(x) && isValidCoordinate(y)) {
-            board[x][y] = figure;
-        } else {
-            throw new IllegalArgumentException("Cannot place figure: Coordinates " + x + ", " + y + " are out of board bounds.");
+            if (attackedSquares.contains(coordinates)) {
+                return true;
+            }
         }
+        return false;
     }
 }
+

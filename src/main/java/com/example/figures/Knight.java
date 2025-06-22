@@ -1,62 +1,36 @@
 package com.example.figures;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.example.Coordinate;
+import com.example.Coordinates;
+import com.example.CoordinatesShift;
 import com.example.FigureType;
-import com.example.ValidateCoordinate;
-import com.example.board.UnmodifiableBoardView;
 import com.example.config.Color;
 
 public class Knight extends Figure{
 
-    public Knight(int file, int runk, Color color) {
-        this.file = file;
-        this.runk = runk;
-        this.color = color;
-        this.type = FigureType.KNIGHT;
+    public Knight (Coordinates coordinate, Color color) {
+        super(coordinate, color);
+        this.figureType = FigureType.KNIGHT;
     }
 
     @Override
-    public void mekeMove(Coordinate coordinate) {
-        setCoordinate(coordinate);
+    public Set<CoordinatesShift> getFigureMoves() {
+        return new HashSet<>(Arrays.asList(
+            new CoordinatesShift(1, 2),
+            new CoordinatesShift(2, 1),
+
+            new CoordinatesShift(2, -1),
+            new CoordinatesShift(1, -2),
+
+            new CoordinatesShift(-2, -1),
+            new CoordinatesShift(-1, -2),
+
+            new CoordinatesShift(-2, 1),
+            new CoordinatesShift(-1, 2)
+        ));
     }
-
-    private void setCoordinate(Coordinate coordinate) {
-        this.file = coordinate.getColumn();
-        this.runk = coordinate.getRow();
-    }
-
-
-   @Override
-    public Set<Coordinate> getPossibleMooves(UnmodifiableBoardView board) {
-        Set<Coordinate> posibleMove = new HashSet<>();
-
-        int rows = board.getHeight();
-        int cols = board.getWidth();
-        
-        int[][] directions = {{1, 2}, {1, -2}, {-1, 2}, {-1, -2}, {2, 1}, {2, -1}, {-2, 1}, {-2, -1}};
-        
-
-        for (int[] direction : directions) {
-            int dr = direction[0];
-            int dc = direction[1];
-            
-            int c = this.file + dr;
-            int r = this.runk + dc;
-
-            if (r >= 0 && r < rows && c >= 0 && c < cols) {
-                if (board.get(c, r) == null) {
-                    posibleMove.add(new ValidateCoordinate(r, c));
-                }
-                else {
-                    if (board.get(c, r).color != this.color)  {
-                        posibleMove.add(new ValidateCoordinate(r, c));
-                    }
-                }
-            }
-        }
-        return posibleMove;
-    }
+    
 }
